@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "B5WtVxLEGmPaXtfmmtG+hzzev+GgCoBFV3u/k9+ZH7kS1ETvam+F9kOVic07fpn0HOoKYFt84XZD3u0zenC18Q==",
+  "success": true,
+  "projectFilePath": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyLib\\CompanyLib\\CompanyLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\karim kohel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\karim kohel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

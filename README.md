@@ -1,6 +1,6 @@
-# CompanyDB
+# CompanyDB CDB
 
-> a Programming course mini project
+> CDB a Programming course mini project
 
 ### what is it
 

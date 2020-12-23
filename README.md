@@ -28,6 +28,7 @@ Company database program that features a GUI with multiple forms and screens to 
         - [ ] Stats (No. of employees / No. of Departmenets / general stats)
         - [ ] Add / read employees (for admins)
         - [ ] Read only employees (for normal employees)
+        - [ ] Print employee (and subsequently search for employee)
 
 ### License 
 > Live and let Live

@@ -8,3 +8,4 @@ K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.cspr
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.csproj.CoreCompileInputs.cache
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.exe
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.pdb
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.EmployeeForm.resources

@@ -32,6 +32,10 @@ namespace CompanyUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
             this.AddEmployeeTitleLabel = new System.Windows.Forms.Label();
             this.AddEmployeeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.MinitComboBox = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.SexRadioButton2 = new System.Windows.Forms.RadioButton();
+            this.SexRadioButton = new System.Windows.Forms.RadioButton();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.SexLabel = new System.Windows.Forms.Label();
@@ -46,12 +50,8 @@ namespace CompanyUI
             this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.SSNTextBox = new System.Windows.Forms.TextBox();
             this.SalaryTextBox = new System.Windows.Forms.TextBox();
-            this.SexRadioButton = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.SexRadioButton2 = new System.Windows.Forms.RadioButton();
             this.EmployeeBirthdaydateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DepartmentComboBox = new System.Windows.Forms.ComboBox();
-            this.MinitComboBox = new System.Windows.Forms.ComboBox();
             this.addEmployeeSubmitButton = new System.Windows.Forms.Button();
             this.AddEmployeeLayoutPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -103,6 +103,55 @@ namespace CompanyUI
             this.AddEmployeeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.AddEmployeeLayoutPanel.Size = new System.Drawing.Size(909, 389);
             this.AddEmployeeLayoutPanel.TabIndex = 1;
+            // 
+            // MinitComboBox
+            // 
+            this.MinitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MinitComboBox.FormattingEnabled = true;
+            this.MinitComboBox.Location = new System.Drawing.Point(581, 259);
+            this.MinitComboBox.Name = "MinitComboBox";
+            this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
+            this.MinitComboBox.TabIndex = 16;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.SexRadioButton2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SexRadioButton, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(120, 157);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 71);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // SexRadioButton2
+            // 
+            this.SexRadioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SexRadioButton2.AutoSize = true;
+            this.SexRadioButton2.Location = new System.Drawing.Point(223, 18);
+            this.SexRadioButton2.Name = "SexRadioButton2";
+            this.SexRadioButton2.Size = new System.Drawing.Size(42, 34);
+            this.SexRadioButton2.TabIndex = 15;
+            this.SexRadioButton2.TabStop = true;
+            this.SexRadioButton2.Text = "F";
+            this.SexRadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SexRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // SexRadioButton
+            // 
+            this.SexRadioButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SexRadioButton.AutoSize = true;
+            this.SexRadioButton.Location = new System.Drawing.Point(56, 18);
+            this.SexRadioButton.Name = "SexRadioButton";
+            this.SexRadioButton.Size = new System.Drawing.Size(51, 34);
+            this.SexRadioButton.TabIndex = 14;
+            this.SexRadioButton.TabStop = true;
+            this.SexRadioButton.Text = "M";
+            this.SexRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SexRadioButton.UseVisualStyleBackColor = true;
             // 
             // FirstNameLabel
             // 
@@ -275,50 +324,10 @@ namespace CompanyUI
             this.SalaryTextBox.Size = new System.Drawing.Size(325, 36);
             this.SalaryTextBox.TabIndex = 13;
             // 
-            // SexRadioButton
-            // 
-            this.SexRadioButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SexRadioButton.AutoSize = true;
-            this.SexRadioButton.Location = new System.Drawing.Point(56, 18);
-            this.SexRadioButton.Name = "SexRadioButton";
-            this.SexRadioButton.Size = new System.Drawing.Size(51, 34);
-            this.SexRadioButton.TabIndex = 14;
-            this.SexRadioButton.TabStop = true;
-            this.SexRadioButton.Text = "M";
-            this.SexRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SexRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.SexRadioButton2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SexRadioButton, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(120, 157);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 71);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // SexRadioButton2
-            // 
-            this.SexRadioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SexRadioButton2.AutoSize = true;
-            this.SexRadioButton2.Location = new System.Drawing.Point(223, 18);
-            this.SexRadioButton2.Name = "SexRadioButton2";
-            this.SexRadioButton2.Size = new System.Drawing.Size(42, 34);
-            this.SexRadioButton2.TabIndex = 15;
-            this.SexRadioButton2.TabStop = true;
-            this.SexRadioButton2.Text = "F";
-            this.SexRadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SexRadioButton2.UseVisualStyleBackColor = true;
-            // 
             // EmployeeBirthdaydateTimePicker
             // 
             this.EmployeeBirthdaydateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EmployeeBirthdaydateTimePicker.Location = new System.Drawing.Point(120, 259);
+            this.EmployeeBirthdaydateTimePicker.Location = new System.Drawing.Point(120, 251);
             this.EmployeeBirthdaydateTimePicker.Name = "EmployeeBirthdaydateTimePicker";
             this.EmployeeBirthdaydateTimePicker.Size = new System.Drawing.Size(326, 36);
             this.EmployeeBirthdaydateTimePicker.TabIndex = 14;
@@ -327,19 +336,10 @@ namespace CompanyUI
             // 
             this.DepartmentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 105);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 96);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(325, 38);
             this.DepartmentComboBox.TabIndex = 15;
-            // 
-            // MinitComboBox
-            // 
-            this.MinitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MinitComboBox.FormattingEnabled = true;
-            this.MinitComboBox.Location = new System.Drawing.Point(581, 250);
-            this.MinitComboBox.Name = "MinitComboBox";
-            this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
-            this.MinitComboBox.TabIndex = 16;
             // 
             // addEmployeeSubmitButton
             // 

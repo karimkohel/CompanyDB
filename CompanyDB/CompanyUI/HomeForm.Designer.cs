@@ -37,13 +37,17 @@ namespace CompanyUI
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
             this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.EmployeeListBox = new System.Windows.Forms.ListBox();
-            this.HomeTitleLabel = new System.Windows.Forms.Label();
-            this.DepartmentListBox = new System.Windows.Forms.ListBox();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findDepartmentSalaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EmployeeListBox = new System.Windows.Forms.ListBox();
+            this.HomeTitleLabel = new System.Windows.Forms.Label();
+            this.DepartmentListBox = new System.Windows.Forms.ListBox();
+            this.findDepartmentEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findMoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +58,8 @@ namespace CompanyUI
             this.editToolStripMenuItem,
             this.searchToolStripMenuItem,
             this.searchToolStripMenuItem1,
-            this.findToolStripMenuItem});
+            this.findToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.HomeMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.HomeMenuStrip.Name = "HomeMenuStrip";
             this.HomeMenuStrip.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
@@ -110,6 +115,37 @@ namespace CompanyUI
             this.searchToolStripMenuItem1.Size = new System.Drawing.Size(57, 23);
             this.searchToolStripMenuItem1.Text = "Search:";
             // 
+            // findToolStripMenuItem
+            // 
+            this.findToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.findEmployeeToolStripMenuItem,
+            this.findDepartmentToolStripMenuItem});
+            this.findToolStripMenuItem.Name = "findToolStripMenuItem";
+            this.findToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 8, 0);
+            this.findToolStripMenuItem.Size = new System.Drawing.Size(46, 23);
+            this.findToolStripMenuItem.Text = "Find";
+            // 
+            // findEmployeeToolStripMenuItem
+            // 
+            this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
+            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findEmployeeToolStripMenuItem.Text = "Find employee";
+            // 
+            // findDepartmentToolStripMenuItem
+            // 
+            this.findDepartmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.findDepartmentEmployeesToolStripMenuItem,
+            this.findDepartmentSalaryToolStripMenuItem});
+            this.findDepartmentToolStripMenuItem.Name = "findDepartmentToolStripMenuItem";
+            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findDepartmentToolStripMenuItem.Text = "Find Department";
+            // 
+            // findDepartmentSalaryToolStripMenuItem
+            // 
+            this.findDepartmentSalaryToolStripMenuItem.Name = "findDepartmentSalaryToolStripMenuItem";
+            this.findDepartmentSalaryToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.findDepartmentSalaryToolStripMenuItem.Text = "Find Department Salary";
+            // 
             // EmployeeListBox
             // 
             this.EmployeeListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -151,35 +187,32 @@ namespace CompanyUI
             this.DepartmentListBox.Size = new System.Drawing.Size(512, 332);
             this.DepartmentListBox.TabIndex = 3;
             // 
-            // findToolStripMenuItem
+            // findDepartmentEmployeesToolStripMenuItem
             // 
-            this.findToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findEmployeeToolStripMenuItem,
-            this.findDepartmentToolStripMenuItem});
-            this.findToolStripMenuItem.Name = "findToolStripMenuItem";
-            this.findToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 8, 0);
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(46, 23);
-            this.findToolStripMenuItem.Text = "Find";
+            this.findDepartmentEmployeesToolStripMenuItem.Name = "findDepartmentEmployeesToolStripMenuItem";
+            this.findDepartmentEmployeesToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.findDepartmentEmployeesToolStripMenuItem.Text = "Find Department Employees";
             // 
-            // findEmployeeToolStripMenuItem
+            // aboutToolStripMenuItem
             // 
-            this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
-            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.findEmployeeToolStripMenuItem.Text = "Find employee";
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.findMoreToolStripMenuItem,
+            this.contactUsToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
-            // findDepartmentToolStripMenuItem
+            // findMoreToolStripMenuItem
             // 
-            this.findDepartmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findDepartmentSalaryToolStripMenuItem});
-            this.findDepartmentToolStripMenuItem.Name = "findDepartmentToolStripMenuItem";
-            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.findDepartmentToolStripMenuItem.Text = "Find Department";
+            this.findMoreToolStripMenuItem.Name = "findMoreToolStripMenuItem";
+            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findMoreToolStripMenuItem.Text = "Find More";
             // 
-            // findDepartmentSalaryToolStripMenuItem
+            // contactUsToolStripMenuItem
             // 
-            this.findDepartmentSalaryToolStripMenuItem.Name = "findDepartmentSalaryToolStripMenuItem";
-            this.findDepartmentSalaryToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.findDepartmentSalaryToolStripMenuItem.Text = "Find Department Salary";
+            this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contactUsToolStripMenuItem.Text = "Contact us";
             // 
             // HomeForm
             // 
@@ -219,6 +252,10 @@ namespace CompanyUI
         private System.Windows.Forms.ToolStripMenuItem findDepartmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findDepartmentSalaryToolStripMenuItem;
         private System.Windows.Forms.ListBox DepartmentListBox;
+        private System.Windows.Forms.ToolStripMenuItem findDepartmentEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem findMoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactUsToolStripMenuItem;
     }
 }
 

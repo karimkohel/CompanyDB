@@ -29,6 +29,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [ ] Single Employee sheet page
     - [ ] Salary summation and other stats
     - [ ] Department search
+    - [ ] About Buttons
 
 
 ### License 

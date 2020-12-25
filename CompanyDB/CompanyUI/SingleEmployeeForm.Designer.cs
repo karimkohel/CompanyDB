@@ -100,7 +100,7 @@ namespace CompanyUI
             this.AddEmployeeLayoutPanel.Controls.Add(this.EmployeeBirthdaydateTimePicker, 1, 3);
             this.AddEmployeeLayoutPanel.Controls.Add(this.DepartmentComboBox, 3, 1);
             this.AddEmployeeLayoutPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddEmployeeLayoutPanel.Location = new System.Drawing.Point(15, 80);
+            this.AddEmployeeLayoutPanel.Location = new System.Drawing.Point(25, 80);
             this.AddEmployeeLayoutPanel.Name = "AddEmployeeLayoutPanel";
             this.AddEmployeeLayoutPanel.RowCount = 5;
             this.AddEmployeeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -351,7 +351,7 @@ namespace CompanyUI
             // FindEmployeeTitleLabel
             // 
             this.FindEmployeeTitleLabel.AutoSize = true;
-            this.FindEmployeeTitleLabel.Location = new System.Drawing.Point(366, 16);
+            this.FindEmployeeTitleLabel.Location = new System.Drawing.Point(377, 16);
             this.FindEmployeeTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.FindEmployeeTitleLabel.Name = "FindEmployeeTitleLabel";
             this.FindEmployeeTitleLabel.Size = new System.Drawing.Size(204, 40);

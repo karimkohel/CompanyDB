@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyLib\\CompanyLib\\CompanyLib.csproj": {}
+    "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyDB\\CompanyLib\\CompanyLib.csproj": {}
   },
   "projects": {
-    "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyLib\\CompanyLib\\CompanyLib.csproj": {
+    "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyDB\\CompanyLib\\CompanyLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyLib\\CompanyLib\\CompanyLib.csproj",
+        "projectUniqueName": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyDB\\CompanyLib\\CompanyLib.csproj",
         "projectName": "CompanyLib",
-        "projectPath": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyLib\\CompanyLib\\CompanyLib.csproj",
+        "projectPath": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyDB\\CompanyLib\\CompanyLib.csproj",
         "packagesPath": "C:\\Users\\karim kohel\\.nuget\\packages\\",
-        "outputPath": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyLib\\CompanyLib\\obj\\",
+        "outputPath": "K:\\UNI\\uni\\S5\\Programming\\CompanyDB\\CompanyDB\\CompanyLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\karim kohel\\AppData\\Roaming\\NuGet\\NuGet.Config",

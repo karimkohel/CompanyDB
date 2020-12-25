@@ -4,6 +4,9 @@ using System.Text;
 
 namespace CompanyLib
 {
+    /// <summary>
+    /// Represents the employee that is a part of the epartment
+    /// </summary>
     class Employee
     {
         public String FisrtName { get; set; }

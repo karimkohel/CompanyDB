@@ -6,6 +6,9 @@ namespace CompanyLib
 {
     class Department
     {
+        /// <summary>
+        /// Represents a company department that has employees
+        /// </summary>
         public string Name { get; set; }
         public int Number { get; set; }
         public string Address { get; set; }

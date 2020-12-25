@@ -16,19 +16,19 @@ Company database program that features a GUI with multiple forms and screens to 
 #### Roadmap
 - [ ] Back end
     - [X] Employees class
+        - [ ] User input filteration
+        - [ ] Birthday logic
     - [X] department class
-    - [ ] User System (login / register)
-    - [ ] Database implementation
+    - [ ] Database implementation (Text files)
+    - [ ] Search logic
 - [ ] Front end
-    - [ ] Login Page
-        - [ ] Register Employee / Admin
-        - [ ] Login form
-        - [ ] Register link button
-    - [ ] Home Page
-        - [X] Stats (No. of employees / No. of Departmenets / general stats)
-        - [ ] Add / read employees (for admins)
-        - [ ] Read only employees (for normal employees)
-        - [ ] Print employee (and subsequently search for employee)
+    - [X] Home Page
+    - [X] Add employee page
+    - [ ] Add department page
+    - [ ] Single Employee sheet page
+    - [ ] Salary summation and other stats
+    - [ ] Department search
+
 
 ### License 
 > Live and let Live

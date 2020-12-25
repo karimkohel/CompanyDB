@@ -16,9 +16,10 @@ Company database program that features a GUI with multiple forms and screens to 
 #### Roadmap
 - [ ] Back end
     - [X] Employees class
+        - [ ] Base class
         - [ ] User input filteration
         - [ ] Birthday logic
-    - [X] department class
+    - [X] department base class
     - [ ] Database implementation (Text files)
     - [ ] Search logic
 - [ ] Front end

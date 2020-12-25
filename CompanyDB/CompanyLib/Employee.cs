@@ -17,6 +17,7 @@ namespace CompanyLib
         public string Address { get; set; }
         public char Sex { get; set; }
         public double Salary { get; set; }
+        public Department EmpDepartment { get; set; }
         public int DepartmentNumber { get; set; }
 
     }

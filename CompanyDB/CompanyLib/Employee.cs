@@ -9,6 +9,7 @@ namespace CompanyLib
     /// </summary>
     class Employee
     {
+        public int Number { get; set; }
         public String FisrtName { get; set; }
         public String LastName { get; set; }
         public char Minit { get; set; }

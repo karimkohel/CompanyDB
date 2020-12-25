@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace CompanyUI
 {
-    public partial class Form1 : Form
+    public partial class HomeForm : Form
     {
-        public Form1()
+        public HomeForm()
         {
             InitializeComponent();
+        }
+
+        private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

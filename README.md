@@ -25,7 +25,7 @@ Company database program that features a GUI with multiple forms and screens to 
         - [ ] Login form
         - [ ] Register link button
     - [ ] Home Page
-        - [ ] Stats (No. of employees / No. of Departmenets / general stats)
+        - [X] Stats (No. of employees / No. of Departmenets / general stats)
         - [ ] Add / read employees (for admins)
         - [ ] Read only employees (for normal employees)
         - [ ] Print employee (and subsequently search for employee)

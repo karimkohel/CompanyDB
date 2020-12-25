@@ -1,7 +1,7 @@
 ﻿
 namespace CompanyUI
 {
-    partial class EmployeeForm
+    partial class SingleEmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@ namespace CompanyUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
-            this.AddEmployeeTitleLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingleEmployeeForm));
+            this.FirstEmployeeButton = new System.Windows.Forms.Button();
             this.AddEmployeeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.MinitComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -52,20 +52,27 @@ namespace CompanyUI
             this.SalaryTextBox = new System.Windows.Forms.TextBox();
             this.EmployeeBirthdaydateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DepartmentComboBox = new System.Windows.Forms.ComboBox();
-            this.addEmployeeSubmitButton = new System.Windows.Forms.Button();
+            this.FindEmployeeTitleLabel = new System.Windows.Forms.Label();
+            this.UpdateEmployeeButton = new System.Windows.Forms.Button();
+            this.NextEmployeeButton = new System.Windows.Forms.Button();
+            this.PreviousEmployeeButton = new System.Windows.Forms.Button();
+            this.LastEmployeeButton = new System.Windows.Forms.Button();
             this.AddEmployeeLayoutPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // AddEmployeeTitleLabel
+            // FirstEmployeeButton
             // 
-            this.AddEmployeeTitleLabel.AutoSize = true;
-            this.AddEmployeeTitleLabel.Location = new System.Drawing.Point(363, 9);
-            this.AddEmployeeTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.AddEmployeeTitleLabel.Name = "AddEmployeeTitleLabel";
-            this.AddEmployeeTitleLabel.Size = new System.Drawing.Size(206, 40);
-            this.AddEmployeeTitleLabel.TabIndex = 0;
-            this.AddEmployeeTitleLabel.Text = "Add Employee";
+            this.FirstEmployeeButton.BackColor = System.Drawing.Color.White;
+            this.FirstEmployeeButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FirstEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstEmployeeButton.Location = new System.Drawing.Point(167, 511);
+            this.FirstEmployeeButton.Name = "FirstEmployeeButton";
+            this.FirstEmployeeButton.Size = new System.Drawing.Size(155, 49);
+            this.FirstEmployeeButton.TabIndex = 5;
+            this.FirstEmployeeButton.Text = "First Employee";
+            this.FirstEmployeeButton.UseVisualStyleBackColor = false;
             // 
             // AddEmployeeLayoutPanel
             // 
@@ -93,7 +100,7 @@ namespace CompanyUI
             this.AddEmployeeLayoutPanel.Controls.Add(this.EmployeeBirthdaydateTimePicker, 1, 3);
             this.AddEmployeeLayoutPanel.Controls.Add(this.DepartmentComboBox, 3, 1);
             this.AddEmployeeLayoutPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddEmployeeLayoutPanel.Location = new System.Drawing.Point(12, 73);
+            this.AddEmployeeLayoutPanel.Location = new System.Drawing.Point(15, 80);
             this.AddEmployeeLayoutPanel.Name = "AddEmployeeLayoutPanel";
             this.AddEmployeeLayoutPanel.RowCount = 5;
             this.AddEmployeeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -102,7 +109,7 @@ namespace CompanyUI
             this.AddEmployeeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.AddEmployeeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.AddEmployeeLayoutPanel.Size = new System.Drawing.Size(909, 389);
-            this.AddEmployeeLayoutPanel.TabIndex = 1;
+            this.AddEmployeeLayoutPanel.TabIndex = 4;
             // 
             // MinitComboBox
             // 
@@ -336,40 +343,91 @@ namespace CompanyUI
             // 
             this.DepartmentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 105);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 96);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(325, 38);
             this.DepartmentComboBox.TabIndex = 15;
             // 
-            // addEmployeeSubmitButton
+            // FindEmployeeTitleLabel
             // 
-            this.addEmployeeSubmitButton.BackColor = System.Drawing.Color.White;
-            this.addEmployeeSubmitButton.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.addEmployeeSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployeeSubmitButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployeeSubmitButton.Location = new System.Drawing.Point(366, 492);
-            this.addEmployeeSubmitButton.Name = "addEmployeeSubmitButton";
-            this.addEmployeeSubmitButton.Size = new System.Drawing.Size(200, 49);
-            this.addEmployeeSubmitButton.TabIndex = 2;
-            this.addEmployeeSubmitButton.Text = "Submit";
-            this.addEmployeeSubmitButton.UseVisualStyleBackColor = false;
-            this.addEmployeeSubmitButton.Click += new System.EventHandler(this.button1_Click);
+            this.FindEmployeeTitleLabel.AutoSize = true;
+            this.FindEmployeeTitleLabel.Location = new System.Drawing.Point(366, 16);
+            this.FindEmployeeTitleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.FindEmployeeTitleLabel.Name = "FindEmployeeTitleLabel";
+            this.FindEmployeeTitleLabel.Size = new System.Drawing.Size(204, 40);
+            this.FindEmployeeTitleLabel.TabIndex = 3;
+            this.FindEmployeeTitleLabel.Text = "Find Employee";
             // 
-            // EmployeeForm
+            // UpdateEmployeeButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 40F);
+            this.UpdateEmployeeButton.BackColor = System.Drawing.Color.White;
+            this.UpdateEmployeeButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.UpdateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateEmployeeButton.Location = new System.Drawing.Point(431, 511);
+            this.UpdateEmployeeButton.Name = "UpdateEmployeeButton";
+            this.UpdateEmployeeButton.Size = new System.Drawing.Size(97, 49);
+            this.UpdateEmployeeButton.TabIndex = 6;
+            this.UpdateEmployeeButton.Text = "Update";
+            this.UpdateEmployeeButton.UseVisualStyleBackColor = false;
+            // 
+            // NextEmployeeButton
+            // 
+            this.NextEmployeeButton.BackColor = System.Drawing.Color.White;
+            this.NextEmployeeButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.NextEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextEmployeeButton.Location = new System.Drawing.Point(534, 511);
+            this.NextEmployeeButton.Name = "NextEmployeeButton";
+            this.NextEmployeeButton.Size = new System.Drawing.Size(97, 49);
+            this.NextEmployeeButton.TabIndex = 7;
+            this.NextEmployeeButton.Text = "Next";
+            this.NextEmployeeButton.UseVisualStyleBackColor = false;
+            // 
+            // PreviousEmployeeButton
+            // 
+            this.PreviousEmployeeButton.BackColor = System.Drawing.Color.White;
+            this.PreviousEmployeeButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.PreviousEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousEmployeeButton.Location = new System.Drawing.Point(328, 511);
+            this.PreviousEmployeeButton.Name = "PreviousEmployeeButton";
+            this.PreviousEmployeeButton.Size = new System.Drawing.Size(97, 49);
+            this.PreviousEmployeeButton.TabIndex = 8;
+            this.PreviousEmployeeButton.Text = "Previous";
+            this.PreviousEmployeeButton.UseVisualStyleBackColor = false;
+            // 
+            // LastEmployeeButton
+            // 
+            this.LastEmployeeButton.BackColor = System.Drawing.Color.White;
+            this.LastEmployeeButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.LastEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LastEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastEmployeeButton.Location = new System.Drawing.Point(637, 511);
+            this.LastEmployeeButton.Name = "LastEmployeeButton";
+            this.LastEmployeeButton.Size = new System.Drawing.Size(155, 49);
+            this.LastEmployeeButton.TabIndex = 9;
+            this.LastEmployeeButton.Text = "Last Employee";
+            this.LastEmployeeButton.UseVisualStyleBackColor = false;
+            // 
+            // SingleEmployeeForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 40F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 573);
-            this.Controls.Add(this.addEmployeeSubmitButton);
+            this.ClientSize = new System.Drawing.Size(958, 602);
+            this.Controls.Add(this.LastEmployeeButton);
+            this.Controls.Add(this.PreviousEmployeeButton);
+            this.Controls.Add(this.NextEmployeeButton);
+            this.Controls.Add(this.UpdateEmployeeButton);
+            this.Controls.Add(this.FirstEmployeeButton);
             this.Controls.Add(this.AddEmployeeLayoutPanel);
-            this.Controls.Add(this.AddEmployeeTitleLabel);
-            this.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.FindEmployeeTitleLabel);
+            this.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.Name = "EmployeeForm";
-            this.Text = "Add Employee";
+            this.Name = "SingleEmployeeForm";
+            this.Text = "Find Employee";
             this.AddEmployeeLayoutPanel.ResumeLayout(false);
             this.AddEmployeeLayoutPanel.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -381,8 +439,12 @@ namespace CompanyUI
 
         #endregion
 
-        private System.Windows.Forms.Label AddEmployeeTitleLabel;
+        private System.Windows.Forms.Button FirstEmployeeButton;
         private System.Windows.Forms.TableLayoutPanel AddEmployeeLayoutPanel;
+        private System.Windows.Forms.ComboBox MinitComboBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.RadioButton SexRadioButton2;
+        private System.Windows.Forms.RadioButton SexRadioButton;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.Label SexLabel;
@@ -397,12 +459,12 @@ namespace CompanyUI
         private System.Windows.Forms.TextBox AddressTextBox;
         private System.Windows.Forms.TextBox SSNTextBox;
         private System.Windows.Forms.TextBox SalaryTextBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.RadioButton SexRadioButton2;
-        private System.Windows.Forms.RadioButton SexRadioButton;
         private System.Windows.Forms.DateTimePicker EmployeeBirthdaydateTimePicker;
         private System.Windows.Forms.ComboBox DepartmentComboBox;
-        private System.Windows.Forms.ComboBox MinitComboBox;
-        private System.Windows.Forms.Button addEmployeeSubmitButton;
+        private System.Windows.Forms.Label FindEmployeeTitleLabel;
+        private System.Windows.Forms.Button UpdateEmployeeButton;
+        private System.Windows.Forms.Button NextEmployeeButton;
+        private System.Windows.Forms.Button PreviousEmployeeButton;
+        private System.Windows.Forms.Button LastEmployeeButton;
     }
 }

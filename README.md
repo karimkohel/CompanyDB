@@ -26,7 +26,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Home Page
     - [X] Add employee page
     - [X] Add department page
-    - [ ] Single Employee sheet page
+    - [X] Single Employee sheet page
     - [ ] Salary summation and other stats
     - [ ] Department search
     - [ ] About Buttons

@@ -33,11 +33,11 @@ namespace CompanyUI
             this.addEmployeeSubmitButton = new System.Windows.Forms.Button();
             this.AddEmployeeTitleLabel = new System.Windows.Forms.Label();
             this.AddDepartmentLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.DepartmentNameLabel = new System.Windows.Forms.Label();
+            this.DepartmentNumberLabel = new System.Windows.Forms.Label();
             this.DepartmentAddressLabel = new System.Windows.Forms.Label();
             this.DepartmentNameTextBox = new System.Windows.Forms.TextBox();
             this.DepartmentAddressTextBox = new System.Windows.Forms.TextBox();
-            this.DepartmentNumberLabel = new System.Windows.Forms.Label();
+            this.DepartmentNameLabel = new System.Windows.Forms.Label();
             this.DepartmentNumberTextBox = new System.Windows.Forms.TextBox();
             this.AddNewDepartmentSubmitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,20 +90,20 @@ namespace CompanyUI
             this.AddDepartmentLayoutPanel.Size = new System.Drawing.Size(531, 161);
             this.AddDepartmentLayoutPanel.TabIndex = 7;
             // 
-            // DepartmentNameLabel
+            // DepartmentNumberLabel
             // 
-            this.DepartmentNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DepartmentNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DepartmentNameLabel.AutoSize = true;
-            this.DepartmentNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentNameLabel.Location = new System.Drawing.Point(8, 0);
-            this.DepartmentNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.DepartmentNameLabel.Name = "DepartmentNameLabel";
-            this.DepartmentNameLabel.Size = new System.Drawing.Size(122, 53);
-            this.DepartmentNameLabel.TabIndex = 0;
-            this.DepartmentNameLabel.Text = "Name : ";
-            this.DepartmentNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DepartmentNumberLabel.AutoSize = true;
+            this.DepartmentNumberLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentNumberLabel.Location = new System.Drawing.Point(8, 106);
+            this.DepartmentNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.DepartmentNumberLabel.Name = "DepartmentNumberLabel";
+            this.DepartmentNumberLabel.Size = new System.Drawing.Size(122, 55);
+            this.DepartmentNumberLabel.TabIndex = 11;
+            this.DepartmentNumberLabel.Text = "Number : ";
+            this.DepartmentNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DepartmentAddressLabel
             // 
@@ -140,20 +140,20 @@ namespace CompanyUI
             this.DepartmentAddressTextBox.Size = new System.Drawing.Size(377, 36);
             this.DepartmentAddressTextBox.TabIndex = 10;
             // 
-            // DepartmentNumberLabel
+            // DepartmentNameLabel
             // 
-            this.DepartmentNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DepartmentNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DepartmentNumberLabel.AutoSize = true;
-            this.DepartmentNumberLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentNumberLabel.Location = new System.Drawing.Point(8, 106);
-            this.DepartmentNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.DepartmentNumberLabel.Name = "DepartmentNumberLabel";
-            this.DepartmentNumberLabel.Size = new System.Drawing.Size(122, 55);
-            this.DepartmentNumberLabel.TabIndex = 11;
-            this.DepartmentNumberLabel.Text = "Number : ";
-            this.DepartmentNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DepartmentNameLabel.AutoSize = true;
+            this.DepartmentNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentNameLabel.Location = new System.Drawing.Point(8, 0);
+            this.DepartmentNameLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.DepartmentNameLabel.Name = "DepartmentNameLabel";
+            this.DepartmentNameLabel.Size = new System.Drawing.Size(122, 53);
+            this.DepartmentNameLabel.TabIndex = 0;
+            this.DepartmentNameLabel.Text = "Name : ";
+            this.DepartmentNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DepartmentNumberTextBox
             // 
@@ -177,6 +177,7 @@ namespace CompanyUI
             this.AddNewDepartmentSubmitButton.TabIndex = 8;
             this.AddNewDepartmentSubmitButton.Text = "Submit";
             this.AddNewDepartmentSubmitButton.UseVisualStyleBackColor = false;
+            this.AddNewDepartmentSubmitButton.Click += new System.EventHandler(this.AddNewDepartmentSubmitButton_Click);
             // 
             // label1
             // 

@@ -7,7 +7,7 @@ namespace CompanyLib
     /// <summary>
     /// Represents the employee that is a part of the epartment
     /// </summary>
-    class Employee
+    public class Employee
     {
         public int Number { get; set; }
         public String FisrtName { get; set; }

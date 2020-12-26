@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CompanyLib;
 
 namespace CompanyUI
 {
@@ -16,7 +17,10 @@ namespace CompanyUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeForm());
+
+            // init database before starting form
+
+            Application.Run(new DepartmentForm());
         }
     }
 }

@@ -20,6 +20,7 @@ Company database program that features a GUI with multiple forms and screens to 
         - [ ] User input filteration
         - [ ] Birthday logic
     - [X] department base class
+        - [X] User input filtration
     - [ ] Database implementation (Text files)
     - [ ] Search logic
 - [ ] Front end

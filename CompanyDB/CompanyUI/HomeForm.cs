@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompanyLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,18 @@ namespace CompanyUI
         private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void importDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DepartmentOpenFileDialoge.ShowDialog();
+            Connector.DepartmentFilePath = DepartmentOpenFileDialoge.FileName;
+            // show department data in home page
+        }
+
+        private void newDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // create new file
         }
     }
 }

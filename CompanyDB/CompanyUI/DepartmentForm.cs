@@ -22,10 +22,15 @@ namespace CompanyUI
         {
             if(ValidForm())
             {
-                int number = int.Parse(DepartmentNumberTextBox.Text);
-                Department department = new Department(number, DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
-                // save department in memory
-                // Connector.SerializeDepartment(department);
+                // create department object with valid form data
+                Department department = new Department(int.Parse(DepartmentNumberTextBox.Text), DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
+
+                // load department database or create new one and load them in list
+                List<Department> departments = Connector.LoadDepartments(Connector.DepartmentFilePath);
+
+                // ID and serialize all departments with new one amongst them
+                Connector.SerializeDepartment(department, departments, Connector.DepartmentFilePath);
+
                 DepartmentNameTextBox.Text = "";
                 DepartmentNumberTextBox.Text = "";
                 MessageBox.Show("Department Saved", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);

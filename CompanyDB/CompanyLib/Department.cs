@@ -22,6 +22,13 @@ namespace CompanyLib
             this.Address = address;
             this.Number = number;
         }
+        public Department(int id, int number, string name, string address)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Address = address;
+            this.Number = number;
+        }
 
     }
 }

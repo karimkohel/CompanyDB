@@ -20,7 +20,7 @@ namespace CompanyUI
 
             // init database before starting form
 
-            Application.Run(new HomeForm());
+            Application.Run(new DepartmentForm());
         }
     }
 }

@@ -20,7 +20,19 @@ namespace CompanyUI
 
         private void AddNewDepartmentSubmitButton_Click(object sender, EventArgs e)
         {
-            if(ValidForm())
+            // check user input validity
+            if(!ValidForm())
+            {
+                string msg = "-Department Name should only contain Characters." + "\n" + "-Department number should only contain digits." + "\n" + "-No value should be left empty.";
+                MessageBox.Show(msg, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            // check if there is a database
+            else if (Connector.DepartmentFilePath == null)
+            {
+                string msg = "Must Initialize Database before creating any entries:\n- Home page > Edit > Connect Department Database";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
             {
                 // create department object with valid form data
                 Department department = new Department(int.Parse(DepartmentNumberTextBox.Text), DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
@@ -34,11 +46,6 @@ namespace CompanyUI
                 DepartmentNameTextBox.Text = "";
                 DepartmentNumberTextBox.Text = "";
                 MessageBox.Show("Department Saved", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                string msg = "-Department Name should only contain Characters." + "\n" + "-Department number should only contain digits." + "\n" + "-No value should be left empty.";
-                MessageBox.Show(msg, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

@@ -23,7 +23,7 @@ Company database program that features a GUI with multiple forms and screens to 
         - [ ] User input filteration
         - [ ] Birthday logic
         - [ ] Serialization
-    - [ ] Department class
+    - [X] Department class
         - [X] Base Class
         - [X] User input filtration
         - [X] Serialization

@@ -13,14 +13,23 @@ namespace CompanyLib
         public static void ConnectDB()
         {
             throw new NotImplementedException();
+            // wire up the text files with location and all
         }
-        public Employee CreateEmployee(Employee emp)
+        public static Employee SerializeEmployee(Employee emp)
         {
             throw new NotImplementedException();
 
             // assign employee ID to emp
 
             // return emp;
+        }
+
+        public static Department SerializeDepartment(Department dep)
+        {
+            throw new NotImplementedException();
+            // load text file
+            // convert text file to list
+            // find highest department number
         }
     }
 }

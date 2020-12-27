@@ -9,3 +9,8 @@ K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.cspr
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.exe
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.pdb
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.EmployeeForm.resources
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\bin\Debug\CompanyLib.dll
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\bin\Debug\CompanyLib.pdb
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.DepartmentForm.resources
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.SingleEmployeeForm.resources
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.csproj.CopyComplete

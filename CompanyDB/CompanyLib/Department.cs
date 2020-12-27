@@ -12,6 +12,7 @@ namespace CompanyLib
         public string Name { get; set; }
         public int Number { get; set; }
         public string Address { get; set; }
+        public int Id { get; set; }
         public List<Employee> Employees { get; set; } = new List<Employee>();
 
         public Department(){}

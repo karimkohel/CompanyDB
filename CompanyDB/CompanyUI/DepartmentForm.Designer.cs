@@ -36,9 +36,9 @@ namespace CompanyUI
             this.DepartmentNumberLabel = new System.Windows.Forms.Label();
             this.DepartmentAddressLabel = new System.Windows.Forms.Label();
             this.DepartmentNameTextBox = new System.Windows.Forms.TextBox();
-            this.DepartmentAddressTextBox = new System.Windows.Forms.TextBox();
             this.DepartmentNameLabel = new System.Windows.Forms.Label();
             this.DepartmentNumberTextBox = new System.Windows.Forms.TextBox();
+            this.DepartmentAddressComboBox = new System.Windows.Forms.ComboBox();
             this.AddNewDepartmentSubmitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.AddDepartmentLayoutPanel.SuspendLayout();
@@ -76,9 +76,9 @@ namespace CompanyUI
             this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentNumberLabel, 0, 2);
             this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentAddressLabel, 0, 1);
             this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentNameTextBox, 1, 0);
-            this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentAddressTextBox, 1, 1);
             this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentNameLabel, 0, 0);
             this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentNumberTextBox, 1, 2);
+            this.AddDepartmentLayoutPanel.Controls.Add(this.DepartmentAddressComboBox, 1, 1);
             this.AddDepartmentLayoutPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDepartmentLayoutPanel.Location = new System.Drawing.Point(17, 146);
             this.AddDepartmentLayoutPanel.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
@@ -130,16 +130,6 @@ namespace CompanyUI
             this.DepartmentNameTextBox.Size = new System.Drawing.Size(377, 36);
             this.DepartmentNameTextBox.TabIndex = 9;
             // 
-            // DepartmentAddressTextBox
-            // 
-            this.DepartmentAddressTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DepartmentAddressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DepartmentAddressTextBox.Location = new System.Drawing.Point(146, 62);
-            this.DepartmentAddressTextBox.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.DepartmentAddressTextBox.Name = "DepartmentAddressTextBox";
-            this.DepartmentAddressTextBox.Size = new System.Drawing.Size(377, 36);
-            this.DepartmentAddressTextBox.TabIndex = 10;
-            // 
             // DepartmentNameLabel
             // 
             this.DepartmentNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -164,6 +154,19 @@ namespace CompanyUI
             this.DepartmentNumberTextBox.Name = "DepartmentNumberTextBox";
             this.DepartmentNumberTextBox.Size = new System.Drawing.Size(377, 36);
             this.DepartmentNumberTextBox.TabIndex = 12;
+            // 
+            // DepartmentAddressComboBox
+            // 
+            this.DepartmentAddressComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DepartmentAddressComboBox.FormattingEnabled = true;
+            this.DepartmentAddressComboBox.Items.AddRange(new object[] {
+            "Cairo",
+            "Benha",
+            "Alex"});
+            this.DepartmentAddressComboBox.Location = new System.Drawing.Point(145, 60);
+            this.DepartmentAddressComboBox.Name = "DepartmentAddressComboBox";
+            this.DepartmentAddressComboBox.Size = new System.Drawing.Size(378, 38);
+            this.DepartmentAddressComboBox.TabIndex = 13;
             // 
             // AddNewDepartmentSubmitButton
             // 
@@ -221,10 +224,10 @@ namespace CompanyUI
         private System.Windows.Forms.Label DepartmentNameLabel;
         private System.Windows.Forms.Label DepartmentAddressLabel;
         private System.Windows.Forms.TextBox DepartmentNameTextBox;
-        private System.Windows.Forms.TextBox DepartmentAddressTextBox;
         private System.Windows.Forms.Label DepartmentNumberLabel;
         private System.Windows.Forms.TextBox DepartmentNumberTextBox;
         private System.Windows.Forms.Button AddNewDepartmentSubmitButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox DepartmentAddressComboBox;
     }
 }

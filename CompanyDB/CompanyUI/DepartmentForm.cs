@@ -20,13 +20,20 @@ namespace CompanyUI
 
         private void AddNewDepartmentSubmitButton_Click(object sender, EventArgs e)
         {
-            // throw new NotImplementedException();
-            bool FormIsvalid = ValidateForm();
-
-            if(FormIsvalid){
+            if(ValidForm())
+            {
                 int number = int.Parse(DepartmentNumberTextBox.Text);
-                Department department = new Department(number, DepartmentNameTextBox.Text, DepartmentAddressTextBox.Text);
-                // save department in memory 
+                Department department = new Department(number, DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
+                // save department in memory
+                // Connector.SerializeDepartment(department);
+                DepartmentNameTextBox.Text = "";
+                DepartmentNumberTextBox.Text = "";
+                MessageBox.Show("Department Saved", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string msg = "-Department Name should only contain Characters." + "\n" + "-Department number should only contain digits." + "\n" + "-No value should be left empty.";
+                MessageBox.Show(msg, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -36,42 +43,35 @@ namespace CompanyUI
         /// The method responsible for validating user input to the new Department Form
         /// </summary>
         /// <returns>Bool with true for valid and false for invalid form data</returns>
-        private bool ValidateForm()
+        private bool ValidForm()
         {
-            bool valid = true;
 
-            if(DepartmentNameTextBox.Text.Length == 0 || DepartmentNumberTextBox.Text.Length == 0)
+            if(DepartmentNameTextBox.Text.Length == 0 || DepartmentNumberTextBox.Text.Length == 0 || DepartmentAddressComboBox.Text.Length == 0)
             {
-                valid = false;
-                //implement feedback
+                return false;
             }
 
-
-            // region of department number
+            #region Department Number Validation
             int departmentNumber;
             bool departmentNumberValid = int.TryParse(DepartmentNumberTextBox.Text, out departmentNumber);
             if(!departmentNumberValid)
             {
-                valid = false; // imp feedback
+                return false;
             }
             else if(departmentNumber < 1)
             {
-                valid = false; // imp feedback
+                return false;
             }
+            #endregion
 
-
-            // region of department name
+            #region Department Name Validation
             bool departmentNameValid = !(DepartmentNameTextBox.Text.Any(char.IsDigit));
             if(!departmentNameValid){
-                valid = false; // imp feedback
+                return false;
             }
+            #endregion
 
-
-
-            // region of department address            
-            // should be a combo box (no use of validation)
-
-            return valid;
+            return true;
         }
 
     }

@@ -18,31 +18,29 @@ namespace CompanyUI
             InitializeComponent();
         }
 
-        private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        #region Edit strip menu items
         private void importDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DepartmentOpenFileDialoge.ShowDialog();
             Connector.DepartmentFilePath = DepartmentOpenFileDialoge.FileName;
+
             // show department data in home page
+
+            LoadDepartmentDBButton.Hide();
+            CreateDepartmentDbButton.Hide();
         }
 
         private void newDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // create new file
+            DepartmentFolderBrowser.ShowDialog();
+            Connector.DepartmentFilePath = DepartmentFolderBrowser.SelectedPath+"\\DepartmentsDB.csv";
+
+            // show success msg to user
+            MessageBox.Show("Done", "Successfully added new Department Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            LoadDepartmentDBButton.Hide();
+            CreateDepartmentDbButton.Hide();
         }
+        #endregion
     }
 }

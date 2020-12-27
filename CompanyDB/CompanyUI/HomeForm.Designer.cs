@@ -57,6 +57,11 @@ namespace CompanyUI
             this.searchEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DepartmentOpenFileDialoge = new System.Windows.Forms.OpenFileDialog();
+            this.DepartmentFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.LoadEmployeeDBButton = new System.Windows.Forms.Button();
+            this.CreateEmployeeDbButton = new System.Windows.Forms.Button();
+            this.CreateDepartmentDbButton = new System.Windows.Forms.Button();
+            this.LoadDepartmentDBButton = new System.Windows.Forms.Button();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +98,6 @@ namespace CompanyUI
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
             this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
-            this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // newDepartmentToolStripMenuItem
             // 
@@ -118,7 +122,6 @@ namespace CompanyUI
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(190, 23);
             this.searchToolStripMenuItem.Tag = "";
             this.searchToolStripMenuItem.ToolTipText = "\r\n";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem1
             // 
@@ -199,7 +202,6 @@ namespace CompanyUI
             this.EmployeeListBox.Name = "EmployeeListBox";
             this.EmployeeListBox.Size = new System.Drawing.Size(512, 332);
             this.EmployeeListBox.TabIndex = 1;
-            this.EmployeeListBox.SelectedIndexChanged += new System.EventHandler(this.EmployeeListBox_SelectedIndexChanged);
             // 
             // HomeTitleLabel
             // 
@@ -286,7 +288,61 @@ namespace CompanyUI
             // 
             // DepartmentOpenFileDialoge
             // 
-            this.DepartmentOpenFileDialoge.FileName = "openFileDialog1";
+            this.DepartmentOpenFileDialoge.FileName = "departments.csv";
+            // 
+            // LoadEmployeeDBButton
+            // 
+            this.LoadEmployeeDBButton.BackColor = System.Drawing.Color.White;
+            this.LoadEmployeeDBButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.LoadEmployeeDBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadEmployeeDBButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadEmployeeDBButton.Location = new System.Drawing.Point(209, 576);
+            this.LoadEmployeeDBButton.Name = "LoadEmployeeDBButton";
+            this.LoadEmployeeDBButton.Size = new System.Drawing.Size(149, 35);
+            this.LoadEmployeeDBButton.TabIndex = 9;
+            this.LoadEmployeeDBButton.Text = "Load Employee DB";
+            this.LoadEmployeeDBButton.UseVisualStyleBackColor = false;
+            // 
+            // CreateEmployeeDbButton
+            // 
+            this.CreateEmployeeDbButton.BackColor = System.Drawing.Color.White;
+            this.CreateEmployeeDbButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.CreateEmployeeDbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateEmployeeDbButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateEmployeeDbButton.Location = new System.Drawing.Point(209, 617);
+            this.CreateEmployeeDbButton.Name = "CreateEmployeeDbButton";
+            this.CreateEmployeeDbButton.Size = new System.Drawing.Size(149, 35);
+            this.CreateEmployeeDbButton.TabIndex = 10;
+            this.CreateEmployeeDbButton.Text = "Create Employee DB";
+            this.CreateEmployeeDbButton.UseVisualStyleBackColor = false;
+            // 
+            // CreateDepartmentDbButton
+            // 
+            this.CreateDepartmentDbButton.BackColor = System.Drawing.Color.White;
+            this.CreateDepartmentDbButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.CreateDepartmentDbButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateDepartmentDbButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateDepartmentDbButton.Location = new System.Drawing.Point(777, 617);
+            this.CreateDepartmentDbButton.Name = "CreateDepartmentDbButton";
+            this.CreateDepartmentDbButton.Size = new System.Drawing.Size(149, 35);
+            this.CreateDepartmentDbButton.TabIndex = 12;
+            this.CreateDepartmentDbButton.Text = "Create Department DB";
+            this.CreateDepartmentDbButton.UseVisualStyleBackColor = false;
+            this.CreateDepartmentDbButton.Click += new System.EventHandler(this.newDatabaseToolStripMenuItem_Click);
+            // 
+            // LoadDepartmentDBButton
+            // 
+            this.LoadDepartmentDBButton.BackColor = System.Drawing.Color.White;
+            this.LoadDepartmentDBButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.LoadDepartmentDBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadDepartmentDBButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadDepartmentDBButton.Location = new System.Drawing.Point(777, 576);
+            this.LoadDepartmentDBButton.Name = "LoadDepartmentDBButton";
+            this.LoadDepartmentDBButton.Size = new System.Drawing.Size(149, 35);
+            this.LoadDepartmentDBButton.TabIndex = 11;
+            this.LoadDepartmentDBButton.Text = "Load Department DB";
+            this.LoadDepartmentDBButton.UseVisualStyleBackColor = false;
+            this.LoadDepartmentDBButton.Click += new System.EventHandler(this.importDatabaseToolStripMenuItem_Click);
             // 
             // HomeForm
             // 
@@ -294,6 +350,10 @@ namespace CompanyUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1131, 670);
+            this.Controls.Add(this.CreateDepartmentDbButton);
+            this.Controls.Add(this.LoadDepartmentDBButton);
+            this.Controls.Add(this.CreateEmployeeDbButton);
+            this.Controls.Add(this.LoadEmployeeDBButton);
             this.Controls.Add(this.DepartmentListBox);
             this.Controls.Add(this.HomeTitleLabel);
             this.Controls.Add(this.EmployeeListBox);
@@ -339,6 +399,11 @@ namespace CompanyUI
         private System.Windows.Forms.ToolStripMenuItem newDataseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importDatabaseToolStripMenuItem1;
         private System.Windows.Forms.OpenFileDialog DepartmentOpenFileDialoge;
+        private System.Windows.Forms.FolderBrowserDialog DepartmentFolderBrowser;
+        private System.Windows.Forms.Button LoadEmployeeDBButton;
+        private System.Windows.Forms.Button CreateEmployeeDbButton;
+        private System.Windows.Forms.Button CreateDepartmentDbButton;
+        private System.Windows.Forms.Button LoadDepartmentDBButton;
     }
 }
 

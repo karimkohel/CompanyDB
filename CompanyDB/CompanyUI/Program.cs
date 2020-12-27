@@ -17,10 +17,7 @@ namespace CompanyUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // init database before starting form
-
-            Application.Run(new DepartmentForm());
+            Application.Run(new EmployeeForm());
         }
     }
 }

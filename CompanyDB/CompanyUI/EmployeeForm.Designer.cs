@@ -108,7 +108,7 @@ namespace CompanyUI
             // 
             this.MinitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MinitComboBox.FormattingEnabled = true;
-            this.MinitComboBox.Location = new System.Drawing.Point(581, 250);
+            this.MinitComboBox.Location = new System.Drawing.Point(581, 259);
             this.MinitComboBox.Name = "MinitComboBox";
             this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
             this.MinitComboBox.TabIndex = 16;
@@ -336,7 +336,7 @@ namespace CompanyUI
             // 
             this.DepartmentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 105);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 96);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(325, 38);
             this.DepartmentComboBox.TabIndex = 15;

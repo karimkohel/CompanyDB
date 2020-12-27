@@ -77,8 +77,9 @@ namespace CompanyUI
             #endregion
 
             #region Department Name Validation
-            bool departmentNameValid = !(DepartmentNameTextBox.Text.Any(char.IsDigit));
-            if(!departmentNameValid){
+            // check if department name contains any digits
+            if(DepartmentNameTextBox.Text.Any(char.IsDigit))
+            {
                 return false;
             }
             #endregion

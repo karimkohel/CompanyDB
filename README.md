@@ -15,19 +15,25 @@ Company database program that features a GUI with multiple forms and screens to 
 
 #### Roadmap
 - [ ] Back end
+    - [X] Load Database implementation (Text files)
+    - [ ] Create new database
+    - [ ] Search logic
     - [X] Employees class
         - [X] Base class
         - [ ] User input filteration
         - [ ] Birthday logic
-    - [X] department base class
+        - [ ] Serialization
+    - [ ] Department class
+        - [X] Base Class
         - [X] User input filtration
-    - [ ] Database implementation (Text files)
-    - [ ] Search logic
+        - [X] Serialization
+
 - [ ] Front end
     - [X] Home Page
     - [X] Add employee page
     - [X] Add department page
     - [X] Single Employee sheet page
+    - [ ] Employee search
     - [ ] Salary summation and other stats
     - [ ] Department search
     - [ ] About Buttons

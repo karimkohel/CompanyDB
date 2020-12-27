@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace CompanyLib
@@ -10,33 +9,18 @@ namespace CompanyLib
         /// <summary>
         /// Represents a company department that has employees
         /// </summary>
-        public string Name
-        {
-            set
-            {
-                if (value.Length == 0)
-                {
-                    throw new ArgumentException("Department name can't be empty.");
-                }
-                if (value.Any(char.IsDigit))
-                {
-                    throw new ArgumentException("Department name can't contain numbers.");
-                }
-            }
-
-        }
-        public int Number
-        {
-            set
-            {
-                if(value <= 0)
-                {
-                    throw new ArgumentException("Department number can't be less than 1.");
-                }
-            }
-        }
+        public string Name { get; set; }
+        public int Number { get; set; }
         public string Address { get; set; }
         public List<Employee> Employees { get; set; } = new List<Employee>();
+
+        public Department(){}
+
+        public Department(int number, string name, string address){
+            this.Name = name;
+            this.Address = address;
+            this.Number = number;
+        }
 
     }
 }

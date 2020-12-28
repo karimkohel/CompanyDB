@@ -19,21 +19,22 @@ namespace CompanyUI
         }
 
         #region Edit strip menu items
-        private void importDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void importDepDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DepartmentOpenFileDialoge.ShowDialog();
-            GlobalConnector.DepartmentFilePath = DepartmentOpenFileDialoge.FileName;
+            HomeOpenFileDialoge.ShowDialog();
+            GlobalConnector.DepartmentFilePath = HomeOpenFileDialoge.FileName;
+
+            //show success msg to user
 
             // show department data in home page
 
             LoadDepartmentDBButton.Hide();
             CreateDepartmentDbButton.Hide();
         }
-
-        private void newDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newDepDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DepartmentFolderBrowser.ShowDialog();
-            GlobalConnector.DepartmentFilePath = DepartmentFolderBrowser.SelectedPath+"\\DepartmentsDB.csv";
+            HomeFolderBrowser.ShowDialog();
+            GlobalConnector.DepartmentFilePath = HomeFolderBrowser.SelectedPath+"\\DepartmentsDB.csv";
 
             // show success msg to user
             MessageBox.Show("Done", "Successfully added new Department Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -41,8 +42,32 @@ namespace CompanyUI
             LoadDepartmentDBButton.Hide();
             CreateDepartmentDbButton.Hide();
         }
+
+        private void newEmpDataseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HomeFolderBrowser.ShowDialog();
+            GlobalConnector.EmployeeFilePath = HomeFolderBrowser.SelectedPath+"\\EmployeeDB.csv";
+
+            //show success msg to user
+            MessageBox.Show("Done", "Successfully added new Employee Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadEmployeeDBButton.Hide();
+            CreateEmployeeDbButton.Hide();
+        }
+        private void importEmpDatabaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            HomeOpenFileDialoge.ShowDialog();
+            GlobalConnector.EmployeeFilePath = HomeOpenFileDialoge.FileName;
+
+            //show success msg
+
+            // show employee data in homepage
+
+            LoadEmployeeDBButton.Hide();
+            CreateEmployeeDbButton.Hide();
+        }
         #endregion
 
+        #region File Strip menu
         private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //check db first
@@ -58,5 +83,7 @@ namespace CompanyUI
             Form addDepartment = new DepartmentForm();
             addDepartment.Show();
         }
+        #endregion
+
     }
 }

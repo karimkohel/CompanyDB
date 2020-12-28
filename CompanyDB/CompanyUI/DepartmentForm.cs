@@ -38,11 +38,12 @@ namespace CompanyUI
                 Department department = new Department(int.Parse(DepartmentNumberTextBox.Text), DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
 
                 // load department database or create new one and load them in list
-                List<Department> departments = GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
+                GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
 
                 // ID and serialize all departments with new one amongst them
-                GlobalConnector.SerializeDepartment(department, departments, GlobalConnector.DepartmentFilePath);
+                GlobalConnector.SerializeDepartment(department);
 
+                // clear out form fields
                 DepartmentNameTextBox.Text = "";
                 DepartmentNumberTextBox.Text = "";
                 MessageBox.Show("Department Saved", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);

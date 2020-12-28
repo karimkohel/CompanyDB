@@ -18,6 +18,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Load Database implementation (Text files)
     - [ ] Create new database
     - [ ] Search logic
+    - [ ] Feature if object already exists
     - [X] Employees class
         - [X] Base class
         - [x] User input filteration

@@ -114,8 +114,28 @@ namespace CompanyUI
             "C",
             "D",
             "E",
-            "F"});
-            this.MinitComboBox.Location = new System.Drawing.Point(581, 250);
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.MinitComboBox.Location = new System.Drawing.Point(581, 259);
             this.MinitComboBox.Name = "MinitComboBox";
             this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
             this.MinitComboBox.TabIndex = 16;
@@ -343,7 +363,7 @@ namespace CompanyUI
             // 
             this.DepartmentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 96);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 105);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(325, 38);
             this.DepartmentComboBox.TabIndex = 15;
@@ -377,6 +397,7 @@ namespace CompanyUI
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "EmployeeForm";
             this.Text = "Add Employee";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.AddEmployeeLayoutPanel.ResumeLayout(false);
             this.AddEmployeeLayoutPanel.PerformLayout();
             this.SexLayoutPanel.ResumeLayout(false);

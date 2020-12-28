@@ -17,6 +17,10 @@ namespace CompanyUI
         {
             InitializeComponent();
         }
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            // load departments in combo box
+        }
         private void addEmployeeSubmitButton_Click(object sender, EventArgs e)
         {
             if (!ValidForm())
@@ -29,7 +33,22 @@ namespace CompanyUI
             }
             else
             {
-                Employee emp = createEmployee(); // CONTINUE HERE
+                // create employee with form data
+                Employee emp = createEmployee();
+
+                // load employees from db 
+                GlobalConnector.LoadEmployees(GlobalConnector.EmployeeFilePath);
+
+                // ID and serialize all employees every time a new one is created
+                GlobalConnector.SerializeEmployee(emp);
+
+                FirstNameTextBox.Text = "";
+                LastNameTextBox.Text = "";
+                AddressTextBox.Text = "";
+                SSNTextBox.Text = "";
+                SalaryTextBox.Text = "";
+                MessageBox.Show("Employee Saved", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
@@ -98,10 +117,9 @@ namespace CompanyUI
             // bueatiful one liner that gets the checked radio button value from parant panel
             char sex = char.Parse(SexLayoutPanel.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
             double salary =  double.Parse(SalaryTextBox.Text);
-            // another beautiful one liner to get the department object from global list by department number
-            Department dep = GlobalConnector.Departments.Find(d => d.Number == int.Parse(DepartmentComboBox.Text));
+            int depNumber = int.Parse(DepartmentComboBox.Text);
 
-            return new Employee(fName, lName, minit, ssn, birthday, address, sex, salary, dep);
+            return new Employee(fName, lName, minit, ssn, birthday, address, sex, salary, depNumber);
         }
 
         #endregion

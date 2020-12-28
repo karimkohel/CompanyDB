@@ -56,8 +56,8 @@ namespace CompanyUI
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
             this.HomeTitleLabel = new System.Windows.Forms.Label();
             this.DepartmentListBox = new System.Windows.Forms.ListBox();
-            this.DepartmentOpenFileDialoge = new System.Windows.Forms.OpenFileDialog();
-            this.DepartmentFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.HomeOpenFileDialoge = new System.Windows.Forms.OpenFileDialog();
+            this.HomeFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.LoadEmployeeDBButton = new System.Windows.Forms.Button();
             this.CreateEmployeeDbButton = new System.Windows.Forms.Button();
             this.CreateDepartmentDbButton = new System.Windows.Forms.Button();
@@ -96,27 +96,27 @@ namespace CompanyUI
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
             this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // newDepartmentToolStripMenuItem
             // 
             this.newDepartmentToolStripMenuItem.Name = "newDepartmentToolStripMenuItem";
-            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newDepartmentToolStripMenuItem.Text = "New Department";
             this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
             // 
             // searchEmployeeToolStripMenuItem
             // 
             this.searchEmployeeToolStripMenuItem.Name = "searchEmployeeToolStripMenuItem";
-            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.searchEmployeeToolStripMenuItem.Text = "Search Employee";
             // 
             // searchDepartmentToolStripMenuItem
             // 
             this.searchDepartmentToolStripMenuItem.Name = "searchDepartmentToolStripMenuItem";
-            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.searchDepartmentToolStripMenuItem.Text = "Search Department";
             // 
             // editToolStripMenuItem
@@ -143,14 +143,14 @@ namespace CompanyUI
             this.newDatabaseToolStripMenuItem.Name = "newDatabaseToolStripMenuItem";
             this.newDatabaseToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.newDatabaseToolStripMenuItem.Text = "New Database";
-            this.newDatabaseToolStripMenuItem.Click += new System.EventHandler(this.newDatabaseToolStripMenuItem_Click);
+            this.newDatabaseToolStripMenuItem.Click += new System.EventHandler(this.newDepDatabaseToolStripMenuItem_Click);
             // 
             // importDatabaseToolStripMenuItem
             // 
             this.importDatabaseToolStripMenuItem.Name = "importDatabaseToolStripMenuItem";
             this.importDatabaseToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.importDatabaseToolStripMenuItem.Text = "Import Database";
-            this.importDatabaseToolStripMenuItem.Click += new System.EventHandler(this.importDatabaseToolStripMenuItem_Click);
+            this.importDatabaseToolStripMenuItem.Click += new System.EventHandler(this.importDepDatabaseToolStripMenuItem_Click);
             // 
             // connectEmployeeDatabaseToolStripMenuItem
             // 
@@ -166,12 +166,14 @@ namespace CompanyUI
             this.newDataseToolStripMenuItem.Name = "newDataseToolStripMenuItem";
             this.newDataseToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.newDataseToolStripMenuItem.Text = "New Database";
+            this.newDataseToolStripMenuItem.Click += new System.EventHandler(this.newEmpDataseToolStripMenuItem_Click);
             // 
             // importDatabaseToolStripMenuItem1
             // 
             this.importDatabaseToolStripMenuItem1.Name = "importDatabaseToolStripMenuItem1";
             this.importDatabaseToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.importDatabaseToolStripMenuItem1.Text = "Import Database";
+            this.importDatabaseToolStripMenuItem1.Click += new System.EventHandler(this.importEmpDatabaseToolStripMenuItem1_Click);
             // 
             // searchToolStripMenuItem
             // 
@@ -288,9 +290,9 @@ namespace CompanyUI
             this.DepartmentListBox.Size = new System.Drawing.Size(512, 332);
             this.DepartmentListBox.TabIndex = 3;
             // 
-            // DepartmentOpenFileDialoge
+            // HomeOpenFileDialoge
             // 
-            this.DepartmentOpenFileDialoge.FileName = "departments.csv";
+            this.HomeOpenFileDialoge.FileName = "departments.csv";
             // 
             // LoadEmployeeDBButton
             // 
@@ -304,6 +306,7 @@ namespace CompanyUI
             this.LoadEmployeeDBButton.TabIndex = 9;
             this.LoadEmployeeDBButton.Text = "Load Employee DB";
             this.LoadEmployeeDBButton.UseVisualStyleBackColor = false;
+            this.LoadEmployeeDBButton.Click += new System.EventHandler(this.importEmpDatabaseToolStripMenuItem1_Click);
             // 
             // CreateEmployeeDbButton
             // 
@@ -317,6 +320,7 @@ namespace CompanyUI
             this.CreateEmployeeDbButton.TabIndex = 10;
             this.CreateEmployeeDbButton.Text = "Create Employee DB";
             this.CreateEmployeeDbButton.UseVisualStyleBackColor = false;
+            this.CreateEmployeeDbButton.Click += new System.EventHandler(this.newEmpDataseToolStripMenuItem_Click);
             // 
             // CreateDepartmentDbButton
             // 
@@ -330,7 +334,7 @@ namespace CompanyUI
             this.CreateDepartmentDbButton.TabIndex = 12;
             this.CreateDepartmentDbButton.Text = "Create Department DB";
             this.CreateDepartmentDbButton.UseVisualStyleBackColor = false;
-            this.CreateDepartmentDbButton.Click += new System.EventHandler(this.newDatabaseToolStripMenuItem_Click);
+            this.CreateDepartmentDbButton.Click += new System.EventHandler(this.newDepDatabaseToolStripMenuItem_Click);
             // 
             // LoadDepartmentDBButton
             // 
@@ -344,7 +348,7 @@ namespace CompanyUI
             this.LoadDepartmentDBButton.TabIndex = 11;
             this.LoadDepartmentDBButton.Text = "Load Department DB";
             this.LoadDepartmentDBButton.UseVisualStyleBackColor = false;
-            this.LoadDepartmentDBButton.Click += new System.EventHandler(this.importDatabaseToolStripMenuItem_Click);
+            this.LoadDepartmentDBButton.Click += new System.EventHandler(this.importDepDatabaseToolStripMenuItem_Click);
             // 
             // HomeForm
             // 
@@ -400,8 +404,8 @@ namespace CompanyUI
         private System.Windows.Forms.ToolStripMenuItem connectEmployeeDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newDataseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importDatabaseToolStripMenuItem1;
-        private System.Windows.Forms.OpenFileDialog DepartmentOpenFileDialoge;
-        private System.Windows.Forms.FolderBrowserDialog DepartmentFolderBrowser;
+        private System.Windows.Forms.OpenFileDialog HomeOpenFileDialoge;
+        private System.Windows.Forms.FolderBrowserDialog HomeFolderBrowser;
         private System.Windows.Forms.Button LoadEmployeeDBButton;
         private System.Windows.Forms.Button CreateEmployeeDbButton;
         private System.Windows.Forms.Button CreateDepartmentDbButton;

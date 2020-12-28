@@ -18,12 +18,11 @@ namespace CompanyLib
         public string Address { get; set; }
         public char Sex { get; set; }
         public double Salary { get; set; }
-        public Department EmpDepartment { get; set; }
         public int DepartmentNumber { get; set; }
 
         public Employee(){}
 
-        public Employee(string firstName, string lastName, char minit, long ssn, DateTime birthday, string address, char sex, double salary, Department dep)
+        public Employee(string firstName, string lastName, char minit, long ssn, DateTime birthday, string address, char sex, double salary, int depNumber)
         {
             this.FisrtName = firstName;
             this.LastName = lastName;
@@ -33,8 +32,7 @@ namespace CompanyLib
             this.Address = address;
             this.Sex = sex;
             this.Salary = salary;
-            this.EmpDepartment = dep;
-            this.DepartmentNumber = dep.Number;
+            this.DepartmentNumber = depNumber;
         }
 
     }

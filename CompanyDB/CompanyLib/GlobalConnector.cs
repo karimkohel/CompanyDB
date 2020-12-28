@@ -28,7 +28,7 @@ namespace CompanyLib
                 return new List<string>();
             }
         }
-        public static List<Department> LoadDepartments(string filePath)
+        public static void LoadDepartments(string filePath)
         {
             List<string> lines = ConnectDBFile(filePath);
 
@@ -39,43 +39,84 @@ namespace CompanyLib
                 string[] cols = line.Split(',');
                 departments.Add(new Department(int.Parse(cols[0]), int.Parse(cols[1]), cols[2], cols[3]));
             }
+
             GlobalConnector.Departments = departments;
-            return departments;
         }
-        public static Employee SerializeEmployee(Employee emp)
+        public static void LoadEmployees(string filePath)
         {
-            throw new NotImplementedException();
+            List<string> lines = ConnectDBFile(filePath);
 
-            // assign employee ID to emp
+            List<Employee> employees = new List<Employee>();
 
-            // return emp;
+            // loading info from csv file to each employee property
+            foreach(string line in lines)
+            {
+                string[] cols = line.Split(',');
+                Employee emp = new Employee();
+
+                emp.Id = int.Parse(cols[0]);
+                emp.FisrtName = cols[1];
+                emp.LastName = cols[2];
+                emp.Sex = char.Parse(cols[3]);
+                emp.SSN = long.Parse(cols[4]);
+                string[] bday = cols[5].Split('-'); // splits the bday string even more to allow usage of datetime object
+                emp.Birthday = new DateTime(int.Parse(bday[0]), int.Parse(bday[1]), int.Parse(bday[2]));
+                emp.Address = cols[6];
+                emp.DepartmentNumber = int.Parse(cols[7]);
+                emp.Salary = double.Parse(cols[8]);
+
+                employees.Add(emp);
+            }
+
+            GlobalConnector.Employees = employees;
+        }
+        public static void SerializeEmployee(Employee emp)
+        {
+            int CurrID = 1;
+            if(GlobalConnector.Employees.Count > 0)
+            {
+                CurrID = GlobalConnector.Employees.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            emp.Id = CurrID;
+
+            GlobalConnector.Employees.Add(emp);
+
+            List<string> lines = new List<string>();
+
+            foreach(Employee e in GlobalConnector.Employees)
+            {
+                string bday = e.Birthday.Date.ToString("yyyy-MM-dd");
+                lines.Add($"{e.Id},{e.FisrtName},{e.LastName},{e.Sex},{e.SSN},{bday},{e.Address},{e.DepartmentNumber},{e.Salary}");
+            }
+
+            //write to disk
+            File.WriteAllLines(GlobalConnector.EmployeeFilePath, lines);
         }
 
-        public static Department SerializeDepartment(Department dep, List<Department> departments, string filePath)
+        public static void SerializeDepartment(Department dep)
         {
             // get max ID and add next one to current department
             int currID = 1;
-            if(departments.Count > 0)
+            if(GlobalConnector.Departments.Count > 0)
             {
-                currID = departments.OrderByDescending(x => x.Id).First().Id + 1;
+                currID = GlobalConnector.Departments.OrderByDescending(x => x.Id).First().Id + 1;
             }
 
             dep.Id = currID;
 
-            departments.Add(dep);
+            GlobalConnector.Departments.Add(dep);
 
             List<string> lines = new List<string>();
 
             // add each object the a list of string with comma seperated values
-            foreach(Department d in departments)
+            foreach(Department d in GlobalConnector.Departments)
             {
                 lines.Add($"{ d.Id },{ d.Number },{ d.Name },{ d.Address }");
             }
 
             // write DB to disk
-            File.WriteAllLines(filePath, lines);
-
-            return dep;
+            File.WriteAllLines(GlobalConnector.DepartmentFilePath, lines);
         }
     }
 }

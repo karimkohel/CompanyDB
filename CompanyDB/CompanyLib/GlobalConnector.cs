@@ -39,7 +39,7 @@ namespace CompanyLib
                 string[] cols = line.Split(',');
                 departments.Add(new Department(int.Parse(cols[0]), int.Parse(cols[1]), cols[2], cols[3]));
             }
-
+            GlobalConnector.Departments = departments;
             return departments;
         }
         public static Employee SerializeEmployee(Employee emp)

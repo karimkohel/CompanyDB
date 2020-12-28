@@ -108,6 +108,13 @@ namespace CompanyUI
             // 
             this.MinitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MinitComboBox.FormattingEnabled = true;
+            this.MinitComboBox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"});
             this.MinitComboBox.Location = new System.Drawing.Point(581, 259);
             this.MinitComboBox.Name = "MinitComboBox";
             this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
@@ -353,7 +360,7 @@ namespace CompanyUI
             this.addEmployeeSubmitButton.TabIndex = 2;
             this.addEmployeeSubmitButton.Text = "Submit";
             this.addEmployeeSubmitButton.UseVisualStyleBackColor = false;
-            this.addEmployeeSubmitButton.Click += new System.EventHandler(this.button1_Click);
+            this.addEmployeeSubmitButton.Click += new System.EventHandler(this.addEmployeeSubmitButton_Click);
             // 
             // EmployeeForm
             // 

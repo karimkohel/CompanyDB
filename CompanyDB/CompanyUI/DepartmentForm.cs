@@ -27,7 +27,7 @@ namespace CompanyUI
                 MessageBox.Show(msg, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             // check if there is a database
-            else if (Connector.DepartmentFilePath == null)
+            else if (GlobalConnector.DepartmentFilePath == null)
             {
                 string msg = "Must Initialize Database before creating any entries:\n- Home page > Edit > Connect Department Database";
                 MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -38,10 +38,10 @@ namespace CompanyUI
                 Department department = new Department(int.Parse(DepartmentNumberTextBox.Text), DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
 
                 // load department database or create new one and load them in list
-                List<Department> departments = Connector.LoadDepartments(Connector.DepartmentFilePath);
+                List<Department> departments = GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
 
                 // ID and serialize all departments with new one amongst them
-                Connector.SerializeDepartment(department, departments, Connector.DepartmentFilePath);
+                GlobalConnector.SerializeDepartment(department, departments, GlobalConnector.DepartmentFilePath);
 
                 DepartmentNameTextBox.Text = "";
                 DepartmentNumberTextBox.Text = "";

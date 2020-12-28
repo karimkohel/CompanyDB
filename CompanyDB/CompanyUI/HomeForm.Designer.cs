@@ -34,7 +34,15 @@ namespace CompanyUI
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectDepartmentDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectEmployeeDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newDataseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importDatabaseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
             this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,14 +56,6 @@ namespace CompanyUI
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
             this.HomeTitleLabel = new System.Windows.Forms.Label();
             this.DepartmentListBox = new System.Windows.Forms.ListBox();
-            this.connectDepartmentDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.connectEmployeeDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newDataseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDatabaseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DepartmentOpenFileDialoge = new System.Windows.Forms.OpenFileDialog();
             this.DepartmentFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.LoadEmployeeDBButton = new System.Windows.Forms.Button();
@@ -98,12 +98,26 @@ namespace CompanyUI
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
             this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
+            this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // newDepartmentToolStripMenuItem
             // 
             this.newDepartmentToolStripMenuItem.Name = "newDepartmentToolStripMenuItem";
             this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newDepartmentToolStripMenuItem.Text = "New Department";
+            this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
+            // 
+            // searchEmployeeToolStripMenuItem
+            // 
+            this.searchEmployeeToolStripMenuItem.Name = "searchEmployeeToolStripMenuItem";
+            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchEmployeeToolStripMenuItem.Text = "Search Employee";
+            // 
+            // searchDepartmentToolStripMenuItem
+            // 
+            this.searchDepartmentToolStripMenuItem.Name = "searchDepartmentToolStripMenuItem";
+            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchDepartmentToolStripMenuItem.Text = "Search Department";
             // 
             // editToolStripMenuItem
             // 
@@ -114,6 +128,50 @@ namespace CompanyUI
             this.editToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 8, 0);
             this.editToolStripMenuItem.Size = new System.Drawing.Size(43, 23);
             this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // connectDepartmentDatabaseToolStripMenuItem
+            // 
+            this.connectDepartmentDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newDatabaseToolStripMenuItem,
+            this.importDatabaseToolStripMenuItem});
+            this.connectDepartmentDatabaseToolStripMenuItem.Name = "connectDepartmentDatabaseToolStripMenuItem";
+            this.connectDepartmentDatabaseToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.connectDepartmentDatabaseToolStripMenuItem.Text = "Connect Department database";
+            // 
+            // newDatabaseToolStripMenuItem
+            // 
+            this.newDatabaseToolStripMenuItem.Name = "newDatabaseToolStripMenuItem";
+            this.newDatabaseToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.newDatabaseToolStripMenuItem.Text = "New Database";
+            this.newDatabaseToolStripMenuItem.Click += new System.EventHandler(this.newDatabaseToolStripMenuItem_Click);
+            // 
+            // importDatabaseToolStripMenuItem
+            // 
+            this.importDatabaseToolStripMenuItem.Name = "importDatabaseToolStripMenuItem";
+            this.importDatabaseToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.importDatabaseToolStripMenuItem.Text = "Import Database";
+            this.importDatabaseToolStripMenuItem.Click += new System.EventHandler(this.importDatabaseToolStripMenuItem_Click);
+            // 
+            // connectEmployeeDatabaseToolStripMenuItem
+            // 
+            this.connectEmployeeDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newDataseToolStripMenuItem,
+            this.importDatabaseToolStripMenuItem1});
+            this.connectEmployeeDatabaseToolStripMenuItem.Name = "connectEmployeeDatabaseToolStripMenuItem";
+            this.connectEmployeeDatabaseToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.connectEmployeeDatabaseToolStripMenuItem.Text = "Connect Employee Database";
+            // 
+            // newDataseToolStripMenuItem
+            // 
+            this.newDataseToolStripMenuItem.Name = "newDataseToolStripMenuItem";
+            this.newDataseToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.newDataseToolStripMenuItem.Text = "New Database";
+            // 
+            // importDatabaseToolStripMenuItem1
+            // 
+            this.importDatabaseToolStripMenuItem1.Name = "importDatabaseToolStripMenuItem1";
+            this.importDatabaseToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
+            this.importDatabaseToolStripMenuItem1.Text = "Import Database";
             // 
             // searchToolStripMenuItem
             // 
@@ -145,7 +203,7 @@ namespace CompanyUI
             // findEmployeeToolStripMenuItem
             // 
             this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
-            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.findEmployeeToolStripMenuItem.Text = "Find employee";
             // 
             // findDepartmentToolStripMenuItem
@@ -154,7 +212,7 @@ namespace CompanyUI
             this.findDepartmentEmployeesToolStripMenuItem,
             this.findDepartmentSalaryToolStripMenuItem});
             this.findDepartmentToolStripMenuItem.Name = "findDepartmentToolStripMenuItem";
-            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.findDepartmentToolStripMenuItem.Text = "Find Department";
             // 
             // findDepartmentEmployeesToolStripMenuItem
@@ -181,13 +239,13 @@ namespace CompanyUI
             // findMoreToolStripMenuItem
             // 
             this.findMoreToolStripMenuItem.Name = "findMoreToolStripMenuItem";
-            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.findMoreToolStripMenuItem.Text = "About us";
             // 
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.contactUsToolStripMenuItem.Text = "Contact us";
             // 
             // EmployeeListBox
@@ -229,62 +287,6 @@ namespace CompanyUI
             this.DepartmentListBox.Name = "DepartmentListBox";
             this.DepartmentListBox.Size = new System.Drawing.Size(512, 332);
             this.DepartmentListBox.TabIndex = 3;
-            // 
-            // connectDepartmentDatabaseToolStripMenuItem
-            // 
-            this.connectDepartmentDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newDatabaseToolStripMenuItem,
-            this.importDatabaseToolStripMenuItem});
-            this.connectDepartmentDatabaseToolStripMenuItem.Name = "connectDepartmentDatabaseToolStripMenuItem";
-            this.connectDepartmentDatabaseToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
-            this.connectDepartmentDatabaseToolStripMenuItem.Text = "Connect Department database";
-            // 
-            // connectEmployeeDatabaseToolStripMenuItem
-            // 
-            this.connectEmployeeDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newDataseToolStripMenuItem,
-            this.importDatabaseToolStripMenuItem1});
-            this.connectEmployeeDatabaseToolStripMenuItem.Name = "connectEmployeeDatabaseToolStripMenuItem";
-            this.connectEmployeeDatabaseToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
-            this.connectEmployeeDatabaseToolStripMenuItem.Text = "Connect Employee Database";
-            // 
-            // newDatabaseToolStripMenuItem
-            // 
-            this.newDatabaseToolStripMenuItem.Name = "newDatabaseToolStripMenuItem";
-            this.newDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newDatabaseToolStripMenuItem.Text = "New Database";
-            this.newDatabaseToolStripMenuItem.Click += new System.EventHandler(this.newDatabaseToolStripMenuItem_Click);
-            // 
-            // importDatabaseToolStripMenuItem
-            // 
-            this.importDatabaseToolStripMenuItem.Name = "importDatabaseToolStripMenuItem";
-            this.importDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.importDatabaseToolStripMenuItem.Text = "Import Database";
-            this.importDatabaseToolStripMenuItem.Click += new System.EventHandler(this.importDatabaseToolStripMenuItem_Click);
-            // 
-            // newDataseToolStripMenuItem
-            // 
-            this.newDataseToolStripMenuItem.Name = "newDataseToolStripMenuItem";
-            this.newDataseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newDataseToolStripMenuItem.Text = "New Database";
-            // 
-            // importDatabaseToolStripMenuItem1
-            // 
-            this.importDatabaseToolStripMenuItem1.Name = "importDatabaseToolStripMenuItem1";
-            this.importDatabaseToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.importDatabaseToolStripMenuItem1.Text = "Import Database";
-            // 
-            // searchEmployeeToolStripMenuItem
-            // 
-            this.searchEmployeeToolStripMenuItem.Name = "searchEmployeeToolStripMenuItem";
-            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.searchEmployeeToolStripMenuItem.Text = "Search Employee";
-            // 
-            // searchDepartmentToolStripMenuItem
-            // 
-            this.searchDepartmentToolStripMenuItem.Name = "searchDepartmentToolStripMenuItem";
-            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.searchDepartmentToolStripMenuItem.Text = "Search Department";
             // 
             // DepartmentOpenFileDialoge
             // 

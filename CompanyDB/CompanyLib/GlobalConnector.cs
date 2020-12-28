@@ -8,10 +8,14 @@ namespace CompanyLib
 {
     /// <summary>
     /// The Connector class is responsible for connecting and handling of the database (in text files)
+    /// and all Global information needed by the App
     /// </summary>
     public class GlobalConnector
     {
-
+        #region Global
+        /// <summary>
+        /// Global variables that control global information needed accross App
+        /// </summary>
         public static string DepartmentFilePath { get; set; }
         public static string EmployeeFilePath { get; set; }
         public static List<Department> Departments{ get; set;}
@@ -28,6 +32,9 @@ namespace CompanyLib
                 return new List<string>();
             }
         }
+        #endregion
+
+        #region Department Serializers
         public static void LoadDepartments(string filePath)
         {
             List<string> lines = ConnectDBFile(filePath);
@@ -42,6 +49,33 @@ namespace CompanyLib
 
             GlobalConnector.Departments = departments;
         }
+        public static void SerializeDepartment(Department dep)
+        {
+            // get max ID and add next one to current department
+            int currID = 1;
+            if(GlobalConnector.Departments.Count > 0)
+            {
+                currID = GlobalConnector.Departments.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            dep.Id = currID;
+
+            GlobalConnector.Departments.Add(dep);
+
+            List<string> lines = new List<string>();
+
+            // add each object the a list of string with comma seperated values
+            foreach(Department d in GlobalConnector.Departments)
+            {
+                lines.Add($"{ d.Id },{ d.Number },{ d.Name },{ d.Address }");
+            }
+
+            // write DB to disk
+            File.WriteAllLines(GlobalConnector.DepartmentFilePath, lines);
+        }
+        #endregion
+
+        #region Employee Serializers
         public static void LoadEmployees(string filePath)
         {
             List<string> lines = ConnectDBFile(filePath);
@@ -93,30 +127,6 @@ namespace CompanyLib
             //write to disk
             File.WriteAllLines(GlobalConnector.EmployeeFilePath, lines);
         }
-
-        public static void SerializeDepartment(Department dep)
-        {
-            // get max ID and add next one to current department
-            int currID = 1;
-            if(GlobalConnector.Departments.Count > 0)
-            {
-                currID = GlobalConnector.Departments.OrderByDescending(x => x.Id).First().Id + 1;
-            }
-
-            dep.Id = currID;
-
-            GlobalConnector.Departments.Add(dep);
-
-            List<string> lines = new List<string>();
-
-            // add each object the a list of string with comma seperated values
-            foreach(Department d in GlobalConnector.Departments)
-            {
-                lines.Add($"{ d.Id },{ d.Number },{ d.Name },{ d.Address }");
-            }
-
-            // write DB to disk
-            File.WriteAllLines(GlobalConnector.DepartmentFilePath, lines);
-        }
+        #endregion
     }
 }

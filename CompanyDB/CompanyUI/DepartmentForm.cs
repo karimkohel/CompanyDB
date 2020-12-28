@@ -37,8 +37,11 @@ namespace CompanyUI
                 // create department object with valid form data
                 Department department = new Department(int.Parse(DepartmentNumberTextBox.Text), DepartmentNameTextBox.Text, DepartmentAddressComboBox.Text);
 
-                // load department database or create new one and load them in list
-                GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
+                if(GlobalConnector.Departments == null)
+                {
+                    // load department database or create new one and load them in list
+                    GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
+                }
 
                 // ID and serialize all departments with new one amongst them
                 GlobalConnector.SerializeDepartment(department);

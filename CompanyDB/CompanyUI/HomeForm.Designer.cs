@@ -62,6 +62,7 @@ namespace CompanyUI
             this.CreateEmployeeDbButton = new System.Windows.Forms.Button();
             this.CreateDepartmentDbButton = new System.Windows.Forms.Button();
             this.LoadDepartmentDBButton = new System.Windows.Forms.Button();
+            this.DepartmentsLabel = new System.Windows.Forms.Label();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -350,12 +351,22 @@ namespace CompanyUI
             this.LoadDepartmentDBButton.UseVisualStyleBackColor = false;
             this.LoadDepartmentDBButton.Click += new System.EventHandler(this.importDepDatabaseToolStripMenuItem_Click);
             // 
+            // DepartmentsLabel
+            // 
+            this.DepartmentsLabel.AutoSize = true;
+            this.DepartmentsLabel.Location = new System.Drawing.Point(804, 185);
+            this.DepartmentsLabel.Name = "DepartmentsLabel";
+            this.DepartmentsLabel.Size = new System.Drawing.Size(133, 30);
+            this.DepartmentsLabel.TabIndex = 13;
+            this.DepartmentsLabel.Text = "Departments";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1131, 670);
+            this.Controls.Add(this.DepartmentsLabel);
             this.Controls.Add(this.CreateDepartmentDbButton);
             this.Controls.Add(this.LoadDepartmentDBButton);
             this.Controls.Add(this.CreateEmployeeDbButton);
@@ -410,6 +421,7 @@ namespace CompanyUI
         private System.Windows.Forms.Button CreateEmployeeDbButton;
         private System.Windows.Forms.Button CreateDepartmentDbButton;
         private System.Windows.Forms.Button LoadDepartmentDBButton;
+        private System.Windows.Forms.Label DepartmentsLabel;
     }
 }
 

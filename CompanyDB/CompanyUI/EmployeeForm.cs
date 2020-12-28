@@ -19,8 +19,18 @@ namespace CompanyUI
         }
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
-            // load departments in combo box
+            if(GlobalConnector.Departments.Count < 1)
+            {
+                MessageBox.Show("Must Create Departments First in order to create Employees", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int[] departmentsNumbers = GlobalConnector.Departments.Select(x => x.Number).ToArray();
+                DepartmentComboBox.DataSource = departmentsNumbers;
+            }
         }
+
+        #region Submit
         private void addEmployeeSubmitButton_Click(object sender, EventArgs e)
         {
             if (!ValidForm())
@@ -51,6 +61,7 @@ namespace CompanyUI
 
             }
         }
+        #endregion
 
         #region Private helpers
         /// <summary>

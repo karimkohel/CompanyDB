@@ -23,24 +23,16 @@ namespace CompanyUI
         {
             HomeOpenFileDialoge.ShowDialog();
             GlobalConnector.DepartmentFilePath = HomeOpenFileDialoge.FileName;
+            GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
 
-            //show success msg to user
-
-            // show department data in home page
-
-            LoadDepartmentDBButton.Hide();
-            CreateDepartmentDbButton.Hide();
+            afterDepDBLoad();
         }
         private void newDepDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HomeFolderBrowser.ShowDialog();
             GlobalConnector.DepartmentFilePath = HomeFolderBrowser.SelectedPath+"\\DepartmentsDB.csv";
 
-            // show success msg to user
-            MessageBox.Show("Done", "Successfully added new Department Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            LoadDepartmentDBButton.Hide();
-            CreateDepartmentDbButton.Hide();
+            afterDepDBLoad();
         }
 
         private void newEmpDataseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +42,8 @@ namespace CompanyUI
 
             //show success msg to user
             MessageBox.Show("Done", "Successfully added new Employee Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // hide db option after loading db
             LoadEmployeeDBButton.Hide();
             CreateEmployeeDbButton.Hide();
         }
@@ -62,6 +56,8 @@ namespace CompanyUI
 
             // show employee data in homepage
 
+
+            // hide db option after loading db
             LoadEmployeeDBButton.Hide();
             CreateEmployeeDbButton.Hide();
         }
@@ -70,18 +66,62 @@ namespace CompanyUI
         #region File Strip menu
         private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //check db first
-
-            Form addEmployee = new EmployeeForm();
-            addEmployee.Show();
+            if (checkDBLoaded())
+            {
+                Form addEmployee = new EmployeeForm();
+                addEmployee.Show();
+            }
+            else
+            {
+                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void newDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // check db first
+            if (checkDBLoaded())
+            {
+                Form addDepartment = new DepartmentForm();
+                addDepartment.Show();
+            }
+            else
+            {
+                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
 
-            Form addDepartment = new DepartmentForm();
-            addDepartment.Show();
+        #region Helpers
+        private bool checkDBLoaded()
+        {
+            if(GlobalConnector.DepartmentFilePath == null)
+            {
+                return false;
+            }
+            if(GlobalConnector.EmployeeFilePath == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void afterDepDBLoad()
+        {
+            // show data in list boxes
+            if(GlobalConnector.Departments != null)
+            {
+                string[] departmentsNames = GlobalConnector.Departments.Select(d => d.Name).ToArray(); // departments are null check for that first 
+                DepartmentListBox.DataSource = departmentsNames;
+            }
+
+            // show succes to user
+            MessageBox.Show("Successfully added Department Database", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // hide db option after loading db
+            LoadDepartmentDBButton.Hide();
+            CreateDepartmentDbButton.Hide();
         }
         #endregion
 

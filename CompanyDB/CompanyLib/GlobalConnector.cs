@@ -72,7 +72,7 @@ namespace CompanyLib
                 lines.Add($"{ d.Id },{ d.Number },{ d.Name },{ d.Address }");
             }
 
-            // write to disk
+            // write DB to disk
             File.WriteAllLines(filePath, lines);
 
             return dep;

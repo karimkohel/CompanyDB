@@ -21,15 +21,11 @@ namespace CompanyUI
         {
             if (!ValidForm())
             {
-                string msg = "- Employee first and last names should only contain Characters." + "\n" + "- Employee SSN should be 9 digits only";
-                msg = msg + "\n" + "- Employee Salary should be digits only" + "\n" + "- Emlpoyee Birthday should not be in the future or ower than 18 year from now";
-                msg = msg + "\n" + "- No value should be left empty.";
-                MessageBox.Show(msg, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                invalideError();
             }
             else if(GlobalConnector.EmployeeFilePath == null || GlobalConnector.DepartmentFilePath == null)
             {
-                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
-                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataBaseError();
             }
             else
             {
@@ -74,6 +70,20 @@ namespace CompanyUI
             //check for future dates or dates closer than 18 year
 
             return true;
+        }
+
+        private void invalideError()
+        {
+            string msg = "- Employee first and last names should only contain Characters." + "\n" + "- Employee SSN should be 9 digits only";
+            msg = msg + "\n" + "- Employee Salary should be digits only" + "\n" + "- Emlpoyee Birthday should not be in the future or ower than 18 year from now";
+            msg = msg + "\n" + "- No value should be left empty.";
+            MessageBox.Show(msg, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dataBaseError()
+        {
+            string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
+            MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
     }

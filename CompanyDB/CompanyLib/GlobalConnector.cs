@@ -9,11 +9,13 @@ namespace CompanyLib
     /// <summary>
     /// The Connector class is responsible for connecting and handling of the database (in text files)
     /// </summary>
-    public class Connector
+    public class GlobalConnector
     {
 
         public static string DepartmentFilePath { get; set; }
         public static string EmployeeFilePath { get; set; }
+        public static List<Department> Departments{ get; set;}
+        public static List<Employee> Employees { get; set; }
 
         private static List<string> ConnectDBFile(string filePath)
         {

@@ -29,10 +29,11 @@ namespace CompanyUI
             }
             else
             {
-                Employee emp = new Employee(); // continue HERE
+                Employee emp = createEmployee(); // CONTINUE HERE
             }
         }
 
+        #region Private helpers
         /// <summary>
         /// Private helper method that checks validity of Add Employee Form
         /// </summary>
@@ -42,7 +43,7 @@ namespace CompanyUI
             if(FirstNameTextBox.Text.Length == 0 || LastNameTextBox.Text.Length == 0
                 || AddressTextBox.Text.Length == 0 || SSNTextBox.Text.Length == 0
                 || DepartmentComboBox.Text.Length == 0 || SalaryTextBox.Text.Length == 0
-                || MinitComboBox.Text.Length == 0) // add date too
+                || MinitComboBox.Text.Length == 0)
             {
                 return false;
             }
@@ -85,6 +86,25 @@ namespace CompanyUI
             string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
             MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private Employee createEmployee()
+        {
+            string fName = FirstNameTextBox.Text;
+            string lName = LastNameTextBox.Text;
+            string address = AddressTextBox.Text;
+            char minit = char.Parse(MinitComboBox.Text);
+            long ssn = long.Parse(SSNTextBox.Text);
+            DateTime birthday = EmployeeBirthdaydateTimePicker.Value;
+            // bueatiful one liner that gets the checked radio button value from parant panel
+            char sex = char.Parse(SexLayoutPanel.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
+            double salary =  double.Parse(SalaryTextBox.Text);
+            // another beautiful one liner to get the department object from global list by department number
+            Department dep = GlobalConnector.Departments.Find(d => d.Number == int.Parse(DepartmentComboBox.Text));
+
+            return new Employee(fName, lName, minit, ssn, birthday, address, sex, salary, dep);
+        }
+
+        #endregion
 
     }
 }

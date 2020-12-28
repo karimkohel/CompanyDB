@@ -14,7 +14,7 @@ namespace CompanyLib
         public String LastName { get; set; }
         public char Minit { get; set; }
         public long SSN { get; set; }
-        public string Birthday { get; set; } // learn dates in C#
+        public DateTime Birthday { get; set; }
         public string Address { get; set; }
         public char Sex { get; set; }
         public double Salary { get; set; }
@@ -23,9 +23,8 @@ namespace CompanyLib
 
         public Employee(){}
 
-        public Employee(int id, string firstName, string lastName, char minit, long ssn, string birthday, string address, char sex, double salary, Department dep)
+        public Employee(string firstName, string lastName, char minit, long ssn, DateTime birthday, string address, char sex, double salary, Department dep)
         {
-            this.Id = id;
             this.FisrtName = firstName;
             this.LastName = lastName;
             this.Minit = minit;

@@ -17,10 +17,11 @@ Company database program that features a GUI with multiple forms and screens to 
 - [ ] Back end
     - [X] Load Database implementation (Text files)
     - [X] Create new database
-    - [ ] Add data in employee list box
+    - [X] Add data in employee list box
+    - [ ] **Single employee lookup logic**
+    - [ ] Search logic
     - [ ] Add data into home list boxes after every save
     - [ ] Exception handling for file reading  
-    - [ ] Search logic
     - [ ] Feature if object already exists
     - [ ] Resolve writeaccesviolationException when writing file in C drive
     - [X] Employees class

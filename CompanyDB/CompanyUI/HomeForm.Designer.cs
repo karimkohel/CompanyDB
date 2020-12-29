@@ -262,6 +262,7 @@ namespace CompanyUI
             this.EmployeeListBox.ItemHeight = 30;
             this.EmployeeListBox.Location = new System.Drawing.Point(27, 238);
             this.EmployeeListBox.Name = "EmployeeListBox";
+            this.EmployeeListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.EmployeeListBox.Size = new System.Drawing.Size(512, 332);
             this.EmployeeListBox.TabIndex = 1;
             // 
@@ -289,6 +290,7 @@ namespace CompanyUI
             this.DepartmentListBox.ItemHeight = 30;
             this.DepartmentListBox.Location = new System.Drawing.Point(592, 238);
             this.DepartmentListBox.Name = "DepartmentListBox";
+            this.DepartmentListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.DepartmentListBox.Size = new System.Drawing.Size(512, 332);
             this.DepartmentListBox.TabIndex = 3;
             // 

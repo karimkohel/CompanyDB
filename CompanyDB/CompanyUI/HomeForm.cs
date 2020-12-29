@@ -63,15 +63,21 @@ namespace CompanyUI
         #region File Strip menu
         private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (checkDBLoaded())
-            {
-                Form addEmployee = new EmployeeForm();
-                addEmployee.Show();
-            }
-            else
+            if (!checkDBLoaded())
             {
                 string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
                 MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(GlobalConnector.Departments == null)
+            {
+                string msg = "Must create Departments first then create Employees";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                Form addEmployee = new EmployeeForm();
+                addEmployee.Show();
             }
         }
 

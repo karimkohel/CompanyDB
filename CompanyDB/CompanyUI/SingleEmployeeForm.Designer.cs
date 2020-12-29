@@ -384,6 +384,7 @@ namespace CompanyUI
             this.NextEmployeeButton.TabIndex = 7;
             this.NextEmployeeButton.Text = "Next";
             this.NextEmployeeButton.UseVisualStyleBackColor = false;
+            this.NextEmployeeButton.Click += new System.EventHandler(this.NextEmployeeButton_Click);
             // 
             // PreviousEmployeeButton
             // 

@@ -18,7 +18,6 @@ namespace CompanyUI
             InitializeComponent();
         }
 
-
         #region File Strip menu
         private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -83,9 +82,10 @@ namespace CompanyUI
             {
                 GlobalConnector.EmployeeFilePath = HomeOpenFileDialoge.FileName;
                 GlobalConnector.LoadEmployees(GlobalConnector.EmployeeFilePath);
+                
+                afterEmpDBLoad();
             }
 
-            afterEmpDBLoad();
         }
         private void newEmpDataseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -111,6 +111,17 @@ namespace CompanyUI
         }
         #endregion
 
+        #region Refresh Buttons
+        private void EmpReloadButton_Click(object sender, EventArgs e)
+        {
+            loadEmpList();
+        }
+        private void depReloadButton_Click(object sender, EventArgs e)
+        {
+            loadDepList();
+        }
+        #endregion
+
         #region Helpers
         private bool checkDBLoaded()
         {
@@ -130,8 +141,7 @@ namespace CompanyUI
             // show data in list boxes
             if(GlobalConnector.Departments != null)
             {
-                string[] departmentsNames = GlobalConnector.Departments.Select(d => d.Name).ToArray();
-                DepartmentListBox.DataSource = departmentsNames;
+                loadDepList();
             }
 
             // show succes to user
@@ -140,6 +150,7 @@ namespace CompanyUI
             // hide db option after loading db
             LoadDepartmentDBButton.Hide();
             CreateDepartmentDbButton.Hide();
+            depReloadButton.Visible = true;
         }
 
         private void afterEmpDBLoad()
@@ -147,8 +158,7 @@ namespace CompanyUI
             // show data in list boxes
             if(GlobalConnector.Employees != null)
             {
-                string[] empNames = GlobalConnector.Employees.Select(e => e.LastName).ToArray();
-                EmployeeListBox.DataSource = empNames;
+                loadEmpList();
             }
 
             // show success msg to user
@@ -157,12 +167,24 @@ namespace CompanyUI
             //hide db options
             LoadEmployeeDBButton.Hide();
             CreateEmployeeDbButton.Hide();
+            EmpReloadButton.Visible = true;
         }
 
         private void dbErrorMsg()
         {
             string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
             MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void loadDepList()
+        {
+            string[] departmentsNames = GlobalConnector.Departments.Select(d => d.Name).ToArray();
+            DepartmentListBox.DataSource = departmentsNames;
+        }
+        private void loadEmpList()
+        {
+            string[] empNames = GlobalConnector.Employees.Select(e => e.LastName).ToArray();
+            EmployeeListBox.DataSource = empNames;
         }
         #endregion
 

@@ -90,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SingleEmployeeForm.resx">
       <DependentUpon>SingleEmployeeForm.cs</DependentUpon>
@@ -112,6 +113,9 @@
       <Project>{a8838596-e529-439e-93cf-df8dd41cf976}</Project>
       <Name>CompanyLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dependencies\reload.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -64,6 +64,8 @@ namespace CompanyUI
             this.LoadDepartmentDBButton = new System.Windows.Forms.Button();
             this.DepartmentsLabel = new System.Windows.Forms.Label();
             this.EmployeesLabel = new System.Windows.Forms.Label();
+            this.EmpReloadButton = new System.Windows.Forms.Button();
+            this.depReloadButton = new System.Windows.Forms.Button();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,27 +100,27 @@ namespace CompanyUI
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
             this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // newDepartmentToolStripMenuItem
             // 
             this.newDepartmentToolStripMenuItem.Name = "newDepartmentToolStripMenuItem";
-            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newDepartmentToolStripMenuItem.Text = "New Department";
             this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
             // 
             // searchEmployeeToolStripMenuItem
             // 
             this.searchEmployeeToolStripMenuItem.Name = "searchEmployeeToolStripMenuItem";
-            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.searchEmployeeToolStripMenuItem.Text = "Search Employee";
             // 
             // searchDepartmentToolStripMenuItem
             // 
             this.searchDepartmentToolStripMenuItem.Name = "searchDepartmentToolStripMenuItem";
-            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.searchDepartmentToolStripMenuItem.Text = "Search Department";
             // 
             // editToolStripMenuItem
@@ -244,13 +246,13 @@ namespace CompanyUI
             // findMoreToolStripMenuItem
             // 
             this.findMoreToolStripMenuItem.Name = "findMoreToolStripMenuItem";
-            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.findMoreToolStripMenuItem.Text = "About us";
             // 
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.contactUsToolStripMenuItem.Text = "Contact us";
             // 
             // EmployeeListBox
@@ -369,12 +371,48 @@ namespace CompanyUI
             this.EmployeesLabel.TabIndex = 14;
             this.EmployeesLabel.Text = "Employees";
             // 
+            // EmpReloadButton
+            // 
+            this.EmpReloadButton.BackColor = System.Drawing.Color.Transparent;
+            this.EmpReloadButton.BackgroundImage = global::CompanyUI.Properties.Resources.reload;
+            this.EmpReloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EmpReloadButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.EmpReloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EmpReloadButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpReloadButton.Location = new System.Drawing.Point(264, 576);
+            this.EmpReloadButton.Margin = new System.Windows.Forms.Padding(1);
+            this.EmpReloadButton.Name = "EmpReloadButton";
+            this.EmpReloadButton.Size = new System.Drawing.Size(40, 40);
+            this.EmpReloadButton.TabIndex = 15;
+            this.EmpReloadButton.UseVisualStyleBackColor = false;
+            this.EmpReloadButton.Visible = false;
+            this.EmpReloadButton.Click += new System.EventHandler(this.EmpReloadButton_Click);
+            // 
+            // depReloadButton
+            // 
+            this.depReloadButton.BackColor = System.Drawing.Color.Transparent;
+            this.depReloadButton.BackgroundImage = global::CompanyUI.Properties.Resources.reload;
+            this.depReloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.depReloadButton.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.depReloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.depReloadButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depReloadButton.Location = new System.Drawing.Point(829, 576);
+            this.depReloadButton.Margin = new System.Windows.Forms.Padding(1);
+            this.depReloadButton.Name = "depReloadButton";
+            this.depReloadButton.Size = new System.Drawing.Size(40, 40);
+            this.depReloadButton.TabIndex = 16;
+            this.depReloadButton.UseVisualStyleBackColor = false;
+            this.depReloadButton.Visible = false;
+            this.depReloadButton.Click += new System.EventHandler(this.depReloadButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1131, 670);
+            this.Controls.Add(this.depReloadButton);
+            this.Controls.Add(this.EmpReloadButton);
             this.Controls.Add(this.EmployeesLabel);
             this.Controls.Add(this.DepartmentsLabel);
             this.Controls.Add(this.CreateDepartmentDbButton);
@@ -433,6 +471,8 @@ namespace CompanyUI
         private System.Windows.Forms.Button LoadDepartmentDBButton;
         private System.Windows.Forms.Label DepartmentsLabel;
         private System.Windows.Forms.Label EmployeesLabel;
+        private System.Windows.Forms.Button EmpReloadButton;
+        private System.Windows.Forms.Button depReloadButton;
     }
 }
 

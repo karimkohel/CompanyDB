@@ -14,6 +14,7 @@ namespace CompanyUI
     public partial class SingleEmployeeForm : Form
     {
         private Employee currentEmployee;
+        private Employee lastEmployee;
 
         public SingleEmployeeForm()
         {
@@ -24,6 +25,7 @@ namespace CompanyUI
         {
             currentEmployee = getEmployee(1);
             loadEmpToUi(currentEmployee);
+            lastEmployee = GlobalConnector.Employees.Last();
         }
 
         #region Buttons
@@ -52,10 +54,19 @@ namespace CompanyUI
                 // write list again to disk
                 GlobalConnector.SerializeEmployee(currentEmployee);
 
-                // CONTINUE HERE AND CHECK IF UPDATE WORKS
 
                 MessageBox.Show("Updated Employee Succesfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+        }
+
+        private void NextEmployeeButton_Click(object sender, EventArgs e)
+        {
+            if(currentEmployee.Id != lastEmployee.Id)
+            {
+                Employee emp = GlobalConnector.Employees.First(i => i.Id == currentEmployee.Id + 1);
+                currentEmployee = emp;
+                loadEmpToUi(emp);
             }
         }
         #endregion

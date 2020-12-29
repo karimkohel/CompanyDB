@@ -54,6 +54,8 @@ namespace CompanyUI
 
                 // CONTINUE HERE AND CHECK IF UPDATE WORKS
 
+                MessageBox.Show("Updated Employee Succesfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
         #endregion

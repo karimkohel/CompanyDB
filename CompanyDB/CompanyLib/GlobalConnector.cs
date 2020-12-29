@@ -130,6 +130,7 @@ namespace CompanyLib
 
             //write to disk
             File.WriteAllLines(GlobalConnector.EmployeeFilePath, lines);
+
         }
         #endregion
     }

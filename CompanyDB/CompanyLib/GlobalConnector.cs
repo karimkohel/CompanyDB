@@ -98,6 +98,7 @@ namespace CompanyLib
                 emp.Address = cols[6];
                 emp.DepartmentNumber = int.Parse(cols[7]);
                 emp.Salary = double.Parse(cols[8]);
+                emp.Minit = char.Parse(cols[9]);
 
                 employees.Add(emp);
             }
@@ -121,7 +122,7 @@ namespace CompanyLib
             foreach(Employee e in GlobalConnector.Employees)
             {
                 string bday = e.Birthday.Date.ToString("yyyy-MM-dd");
-                lines.Add($"{e.Id},{e.FisrtName},{e.LastName},{e.Sex},{e.SSN},{bday},{e.Address},{e.DepartmentNumber},{e.Salary}");
+                lines.Add($"{e.Id},{e.FisrtName},{e.LastName},{e.Sex},{e.SSN},{bday},{e.Address},{e.DepartmentNumber},{e.Salary},{e.Minit}");
             }
 
             //write to disk

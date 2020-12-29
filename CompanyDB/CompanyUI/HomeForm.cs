@@ -99,7 +99,7 @@ namespace CompanyUI
         #region Find Strip menu items
         private void findEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!checkDBLoaded())
+            if (!checkDBLoaded() || GlobalConnector.Employees == null || GlobalConnector.Departments == null)
             {
                 dbErrorMsg();
             }

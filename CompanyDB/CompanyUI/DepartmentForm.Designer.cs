@@ -163,7 +163,7 @@ namespace CompanyUI
             "Cairo",
             "Benha",
             "Alex"});
-            this.DepartmentAddressComboBox.Location = new System.Drawing.Point(145, 60);
+            this.DepartmentAddressComboBox.Location = new System.Drawing.Point(145, 69);
             this.DepartmentAddressComboBox.Name = "DepartmentAddressComboBox";
             this.DepartmentAddressComboBox.Size = new System.Drawing.Size(378, 38);
             this.DepartmentAddressComboBox.TabIndex = 13;

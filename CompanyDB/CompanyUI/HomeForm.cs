@@ -22,10 +22,15 @@ namespace CompanyUI
         private void importDepDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HomeOpenFileDialoge.ShowDialog();
-            GlobalConnector.DepartmentFilePath = HomeOpenFileDialoge.FileName;
-            GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
 
-            afterDepDBLoad();
+            if(HomeOpenFileDialoge.FileName.Length != 0) 
+            {
+                GlobalConnector.DepartmentFilePath = HomeOpenFileDialoge.FileName;
+                GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
+
+                afterDepDBLoad();
+            }
+
         }
         private void newDepDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -35,31 +40,23 @@ namespace CompanyUI
             afterDepDBLoad();
         }
 
+        private void importEmpDatabaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            HomeOpenFileDialoge.ShowDialog();
+            if (HomeOpenFileDialoge.FileName.Length != 0)
+            {
+                GlobalConnector.EmployeeFilePath = HomeOpenFileDialoge.FileName;
+                GlobalConnector.LoadEmployees(GlobalConnector.EmployeeFilePath);
+            }
+
+            afterEmpDBLoad();
+        }
         private void newEmpDataseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HomeFolderBrowser.ShowDialog();
             GlobalConnector.EmployeeFilePath = HomeFolderBrowser.SelectedPath+"\\EmployeeDB.csv";
 
-            //show success msg to user
-            MessageBox.Show("Done", "Successfully added new Employee Database", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // hide db option after loading db
-            LoadEmployeeDBButton.Hide();
-            CreateEmployeeDbButton.Hide();
-        }
-        private void importEmpDatabaseToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            HomeOpenFileDialoge.ShowDialog();
-            GlobalConnector.EmployeeFilePath = HomeOpenFileDialoge.FileName;
-
-            //show success msg
-
-            // show employee data in homepage
-
-
-            // hide db option after loading db
-            LoadEmployeeDBButton.Hide();
-            CreateEmployeeDbButton.Hide();
+            afterEmpDBLoad();
         }
         #endregion
 
@@ -112,7 +109,7 @@ namespace CompanyUI
             // show data in list boxes
             if(GlobalConnector.Departments != null)
             {
-                string[] departmentsNames = GlobalConnector.Departments.Select(d => d.Name).ToArray(); // departments are null check for that first 
+                string[] departmentsNames = GlobalConnector.Departments.Select(d => d.Name).ToArray();
                 DepartmentListBox.DataSource = departmentsNames;
             }
 
@@ -122,6 +119,23 @@ namespace CompanyUI
             // hide db option after loading db
             LoadDepartmentDBButton.Hide();
             CreateDepartmentDbButton.Hide();
+        }
+
+        private void afterEmpDBLoad()
+        {
+            // show data in list boxes
+            if(GlobalConnector.Employees != null)
+            {
+                string[] empNames = GlobalConnector.Employees.Select(e => e.LastName).ToArray();
+                EmployeeListBox.DataSource = empNames;
+            }
+
+            // show success msg to user
+            MessageBox.Show("Successfully added Employee Database", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //hide db options
+            LoadEmployeeDBButton.Hide();
+            CreateEmployeeDbButton.Hide();
         }
         #endregion
 

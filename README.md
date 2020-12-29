@@ -22,6 +22,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [ ] Exception handling for file reading  
     - [ ] Search logic
     - [ ] Feature if object already exists
+    - [ ] Resolve writeaccesviolationException when writing file in C drive
     - [X] Employees class
         - [X] Base class
         - [x] User input filteration

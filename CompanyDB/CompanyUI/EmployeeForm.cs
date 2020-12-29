@@ -19,7 +19,7 @@ namespace CompanyUI
         }
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
-            if(GlobalConnector.Departments.Count < 1)
+            if(GlobalConnector.Departments == null)
             {
                 MessageBox.Show("Must Create Departments First in order to create Employees", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

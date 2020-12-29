@@ -63,6 +63,7 @@ namespace CompanyUI
             this.CreateDepartmentDbButton = new System.Windows.Forms.Button();
             this.LoadDepartmentDBButton = new System.Windows.Forms.Button();
             this.DepartmentsLabel = new System.Windows.Forms.Label();
+            this.EmployeesLabel = new System.Windows.Forms.Label();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,7 +207,7 @@ namespace CompanyUI
             // findEmployeeToolStripMenuItem
             // 
             this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
-            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.findEmployeeToolStripMenuItem.Text = "Find employee";
             // 
             // findDepartmentToolStripMenuItem
@@ -215,7 +216,7 @@ namespace CompanyUI
             this.findDepartmentEmployeesToolStripMenuItem,
             this.findDepartmentSalaryToolStripMenuItem});
             this.findDepartmentToolStripMenuItem.Name = "findDepartmentToolStripMenuItem";
-            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.findDepartmentToolStripMenuItem.Text = "Find Department";
             // 
             // findDepartmentEmployeesToolStripMenuItem
@@ -242,13 +243,13 @@ namespace CompanyUI
             // findMoreToolStripMenuItem
             // 
             this.findMoreToolStripMenuItem.Name = "findMoreToolStripMenuItem";
-            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.findMoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.findMoreToolStripMenuItem.Text = "About us";
             // 
             // contactUsToolStripMenuItem
             // 
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
-            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactUsToolStripMenuItem.Text = "Contact us";
             // 
             // EmployeeListBox
@@ -290,10 +291,6 @@ namespace CompanyUI
             this.DepartmentListBox.Name = "DepartmentListBox";
             this.DepartmentListBox.Size = new System.Drawing.Size(512, 332);
             this.DepartmentListBox.TabIndex = 3;
-            // 
-            // HomeOpenFileDialoge
-            // 
-            this.HomeOpenFileDialoge.FileName = "departments.csv";
             // 
             // LoadEmployeeDBButton
             // 
@@ -354,11 +351,20 @@ namespace CompanyUI
             // DepartmentsLabel
             // 
             this.DepartmentsLabel.AutoSize = true;
-            this.DepartmentsLabel.Location = new System.Drawing.Point(804, 185);
+            this.DepartmentsLabel.Location = new System.Drawing.Point(782, 196);
             this.DepartmentsLabel.Name = "DepartmentsLabel";
             this.DepartmentsLabel.Size = new System.Drawing.Size(133, 30);
             this.DepartmentsLabel.TabIndex = 13;
             this.DepartmentsLabel.Text = "Departments";
+            // 
+            // EmployeesLabel
+            // 
+            this.EmployeesLabel.AutoSize = true;
+            this.EmployeesLabel.Location = new System.Drawing.Point(227, 196);
+            this.EmployeesLabel.Name = "EmployeesLabel";
+            this.EmployeesLabel.Size = new System.Drawing.Size(112, 30);
+            this.EmployeesLabel.TabIndex = 14;
+            this.EmployeesLabel.Text = "Employees";
             // 
             // HomeForm
             // 
@@ -366,6 +372,7 @@ namespace CompanyUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1131, 670);
+            this.Controls.Add(this.EmployeesLabel);
             this.Controls.Add(this.DepartmentsLabel);
             this.Controls.Add(this.CreateDepartmentDbButton);
             this.Controls.Add(this.LoadDepartmentDBButton);
@@ -422,6 +429,7 @@ namespace CompanyUI
         private System.Windows.Forms.Button CreateDepartmentDbButton;
         private System.Windows.Forms.Button LoadDepartmentDBButton;
         private System.Windows.Forms.Label DepartmentsLabel;
+        private System.Windows.Forms.Label EmployeesLabel;
     }
 }
 

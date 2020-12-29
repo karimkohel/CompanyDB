@@ -43,6 +43,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [ ] Salary summation and other stats
     - [ ] Department search
     - [ ] About Buttons
+    - [ ] Make enter key submit forms
 
 
 ### License 

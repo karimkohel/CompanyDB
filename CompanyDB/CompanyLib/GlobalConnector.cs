@@ -107,15 +107,18 @@ namespace CompanyLib
         }
         public static void SerializeEmployee(Employee emp)
         {
-            int CurrID = 1;
-            if(GlobalConnector.Employees.Count > 0)
+            if(emp.Id == 0)
             {
-                CurrID = GlobalConnector.Employees.OrderByDescending(x => x.Id).First().Id + 1;
+                int CurrID = 1;
+                if(GlobalConnector.Employees.Count > 0)
+                {
+                    CurrID = GlobalConnector.Employees.OrderByDescending(x => x.Id).First().Id + 1;
+                }
+
+                emp.Id = CurrID;
+
+                GlobalConnector.Employees.Add(emp);
             }
-
-            emp.Id = CurrID;
-
-            GlobalConnector.Employees.Add(emp);
 
             List<string> lines = new List<string>();
 

@@ -46,9 +46,6 @@ namespace CompanyUI
                 // create employee with form data
                 Employee emp = createEmployee();
 
-                // load employees from db 
-                GlobalConnector.LoadEmployees(GlobalConnector.EmployeeFilePath);
-
                 // ID and serialize all employees every time a new one is created
                 GlobalConnector.SerializeEmployee(emp);
 

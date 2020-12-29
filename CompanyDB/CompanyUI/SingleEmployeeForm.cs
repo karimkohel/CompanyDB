@@ -13,6 +13,8 @@ namespace CompanyUI
 {
     public partial class SingleEmployeeForm : Form
     {
+        private Employee currentEmployee;
+
         public SingleEmployeeForm()
         {
             InitializeComponent();
@@ -20,9 +22,41 @@ namespace CompanyUI
 
         private void SingleEmployeeForm_Load(object sender, EventArgs e)
         {
-            Employee emp = getEmployee(1);
-            loadEmpToUi(emp);
+            currentEmployee = getEmployee(1);
+            loadEmpToUi(currentEmployee);
         }
+
+        #region Buttons
+        private void UpdateEmployeeButton_Click(object sender, EventArgs e)
+        {
+            // implement edit button -- CONTINUE HERE
+
+            // validate info from boxes
+            if (!ValidForm())
+            {
+                invalideError();
+            }
+            else
+            {
+                // update current employee obj
+                Employee tempEmp = updateEmployee(currentEmployee);
+                currentEmployee = tempEmp;
+
+                // get index of current employee in global list
+                Employee oldEmployee = GlobalConnector.Employees.First(x => x.Id == currentEmployee.Id);
+                int index = GlobalConnector.Employees.IndexOf(oldEmployee);
+
+                // place back the object in global list
+                GlobalConnector.Employees[index] = currentEmployee;
+
+                // write list again to disk
+                GlobalConnector.SerializeEmployee(currentEmployee);
+
+                // CONTINUE HERE AND CHECK IF UPDATE WORKS
+
+            }
+        }
+        #endregion
 
         #region Private helpers
         private bool ValidForm()
@@ -74,7 +108,7 @@ namespace CompanyUI
         {
             FirstNameTextBox.Text = emp.FisrtName;
             LastNameTextBox.Text = emp.LastName;
-            if(emp.Sex == 'M')
+            if (emp.Sex == 'M')
             {
                 SexRadioButtonM.Checked = true;
             }
@@ -88,6 +122,21 @@ namespace CompanyUI
             DepartmentComboBox.Text = emp.DepartmentNumber.ToString();
             SalaryTextBox.Text = emp.Salary.ToString();
             MinitComboBox.Text = emp.Minit.ToString();
+        }
+        private Employee updateEmployee(Employee emp)
+        {
+            emp.FisrtName = FirstNameTextBox.Text;
+            emp.LastName = LastNameTextBox.Text;
+            emp.Address = AddressTextBox.Text;
+            emp.Minit = char.Parse(MinitComboBox.Text);
+            emp.SSN = long.Parse(SSNTextBox.Text);
+            emp.Birthday = EmployeeBirthdaydateTimePicker.Value;
+            // bueatiful one liner that gets the checked radio button value from parant panel
+            emp.Sex = char.Parse(sexLayoutPanel.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
+            emp.Salary = double.Parse(SalaryTextBox.Text);
+            emp.DepartmentNumber = int.Parse(DepartmentComboBox.Text);
+
+            return emp;
         }
         #endregion
 

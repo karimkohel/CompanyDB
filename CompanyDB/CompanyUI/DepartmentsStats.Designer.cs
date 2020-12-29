@@ -146,6 +146,7 @@ namespace CompanyUI
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Name = "DepartmentsStats";
             this.Text = "Departments Info";
+            this.Load += new System.EventHandler(this.DepartmentsStats_Load);
             this.DepInfoTabelPanel.ResumeLayout(false);
             this.DepInfoTabelPanel.PerformLayout();
             this.ResumeLayout(false);

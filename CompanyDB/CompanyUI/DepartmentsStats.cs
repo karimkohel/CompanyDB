@@ -16,5 +16,12 @@ namespace CompanyUI
         {
             InitializeComponent();
         }
+        private void DepartmentsStats_Load(object sender, EventArgs e)
+        {
+            // get departments in local list
+            // get count of departments
+            // put count in ui
+            // get summation of salary for each elemenet (department)
+        }
     }
 }

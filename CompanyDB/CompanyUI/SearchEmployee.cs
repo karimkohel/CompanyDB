@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompanyLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,20 +21,34 @@ namespace CompanyUI
 
         private void SearchEmployee_Load(object sender, EventArgs e)
         {
-/*            if( Contains only digits )
-            {
-                // load by ssn
-            }
-            else if ( Contains only chars){
 
+            List<Employee> emps = getEmployees();
+            string[] empNames = emps.Select(x => x.FisrtName).ToArray();
+            EmployeeListBox.DataSource = empNames;
+        }
+
+        #region Helpers
+        private List<Employee> getEmployees()
+        {
+            List<Employee> emps = new List<Employee>();
+
+            if (SearchTerm.Any(char.IsDigit))
+            {
+                // another bueatiful one liner that gets all employees that has the ssn number in thier ssn string 
+                emps = GlobalConnector.Employees.FindAll(z => z.SSN.ToString().Contains(SearchTerm));
+            }
+            else if (SearchTerm.Any(char.IsLetter))
+            {
+                emps = GlobalConnector.Employees.FindAll(z => z.FisrtName.Contains(SearchTerm));
+                emps.AddRange(GlobalConnector.Employees.FindAll(z => z.LastName.Contains(SearchTerm)));
             }
             else
             {
-                what the hell?
-            }*/ 
-            // CONTINUE HERE
+                emps = null;
+            }
 
-            EmployeeListBox.DataSource = "";
+            return emps;
         }
+        #endregion
     }
 }

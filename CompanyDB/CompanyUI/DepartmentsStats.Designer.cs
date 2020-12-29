@@ -57,8 +57,8 @@ namespace CompanyUI
             // DepInfoTabelPanel
             // 
             this.DepInfoTabelPanel.ColumnCount = 2;
-            this.DepInfoTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.04274F));
-            this.DepInfoTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.95727F));
+            this.DepInfoTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.2069F));
+            this.DepInfoTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.7931F));
             this.DepInfoTabelPanel.Controls.Add(this.TotalSalaryLabel, 0, 1);
             this.DepInfoTabelPanel.Controls.Add(this.TotalDepLabel, 0, 0);
             this.DepInfoTabelPanel.Controls.Add(this.TotalDepVarLabel, 1, 0);
@@ -77,7 +77,7 @@ namespace CompanyUI
             this.TotalSalaryLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalSalaryLabel.AutoSize = true;
             this.TotalSalaryLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSalaryLabel.Location = new System.Drawing.Point(4, 255);
+            this.TotalSalaryLabel.Location = new System.Drawing.Point(7, 255);
             this.TotalSalaryLabel.Name = "TotalSalaryLabel";
             this.TotalSalaryLabel.Size = new System.Drawing.Size(195, 39);
             this.TotalSalaryLabel.TabIndex = 5;
@@ -89,9 +89,9 @@ namespace CompanyUI
             this.TotalDepLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalDepLabel.AutoSize = true;
             this.TotalDepLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalDepLabel.Location = new System.Drawing.Point(6, 33);
+            this.TotalDepLabel.Location = new System.Drawing.Point(5, 52);
             this.TotalDepLabel.Name = "TotalDepLabel";
-            this.TotalDepLabel.Size = new System.Drawing.Size(190, 117);
+            this.TotalDepLabel.Size = new System.Drawing.Size(199, 78);
             this.TotalDepLabel.TabIndex = 4;
             this.TotalDepLabel.Text = "Total Departments:";
             this.TotalDepLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -101,7 +101,7 @@ namespace CompanyUI
             this.TotalDepVarLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalDepVarLabel.AutoSize = true;
             this.TotalDepVarLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalDepVarLabel.Location = new System.Drawing.Point(367, 72);
+            this.TotalDepVarLabel.Location = new System.Drawing.Point(370, 72);
             this.TotalDepVarLabel.Name = "TotalDepVarLabel";
             this.TotalDepVarLabel.Size = new System.Drawing.Size(49, 39);
             this.TotalDepVarLabel.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace CompanyUI
             this.TotalSalariesVarLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalSalariesVarLabel.AutoSize = true;
             this.TotalSalariesVarLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSalariesVarLabel.Location = new System.Drawing.Point(367, 255);
+            this.TotalSalariesVarLabel.Location = new System.Drawing.Point(370, 255);
             this.TotalSalariesVarLabel.Name = "TotalSalariesVarLabel";
             this.TotalSalariesVarLabel.Size = new System.Drawing.Size(49, 39);
             this.TotalSalariesVarLabel.TabIndex = 7;

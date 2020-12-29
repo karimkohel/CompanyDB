@@ -18,6 +18,35 @@ namespace CompanyUI
             InitializeComponent();
         }
 
+        #region Search
+        /// <summary>
+        /// opens a new search form with given text as argument of search
+        /// after checking if database is initialized
+        /// </summary>
+        private void searchToolStripMenuItem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Return)
+            {
+                if (!checkDBLoaded() || GlobalConnector.Employees == null)
+                {
+                    string msg = "Must Initialize Both Databases and create Employees before searching them";
+                    MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if(searchToolStripMenuItem.Text.Any(char.IsDigit) && searchToolStripMenuItem.Text.Any(char.IsLetter))
+                {
+                    string msg = "Can only Search by SSN or employee name not both";
+                    MessageBox.Show(msg, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    SearchEmployee searchEmp = new SearchEmployee();
+                    searchEmp.SearchTerm = searchToolStripMenuItem.Text;
+                    searchEmp.Show();
+                }
+            }
+        }
+        #endregion
+
         #region File Strip menu
         private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {

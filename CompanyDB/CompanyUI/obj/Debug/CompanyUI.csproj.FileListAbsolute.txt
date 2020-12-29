@@ -14,3 +14,4 @@ K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\bin\Debug\CompanyLib.pdb
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.DepartmentForm.resources
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.SingleEmployeeForm.resources
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.csproj.CopyComplete
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.SearchEmployee.resources

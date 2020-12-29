@@ -73,6 +73,7 @@ namespace CompanyUI
             this.FirstEmployeeButton.TabIndex = 5;
             this.FirstEmployeeButton.Text = "First Employee";
             this.FirstEmployeeButton.UseVisualStyleBackColor = false;
+            this.FirstEmployeeButton.Click += new System.EventHandler(this.FirstEmployeeButton_Click);
             // 
             // AddEmployeeLayoutPanel
             // 
@@ -115,6 +116,33 @@ namespace CompanyUI
             // 
             this.MinitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MinitComboBox.FormattingEnabled = true;
+            this.MinitComboBox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
             this.MinitComboBox.Location = new System.Drawing.Point(581, 250);
             this.MinitComboBox.Name = "MinitComboBox";
             this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
@@ -398,6 +426,7 @@ namespace CompanyUI
             this.PreviousEmployeeButton.TabIndex = 8;
             this.PreviousEmployeeButton.Text = "Previous";
             this.PreviousEmployeeButton.UseVisualStyleBackColor = false;
+            this.PreviousEmployeeButton.Click += new System.EventHandler(this.PreviousEmployeeButton_Click);
             // 
             // LastEmployeeButton
             // 
@@ -411,6 +440,7 @@ namespace CompanyUI
             this.LastEmployeeButton.TabIndex = 9;
             this.LastEmployeeButton.Text = "Last Employee";
             this.LastEmployeeButton.UseVisualStyleBackColor = false;
+            this.LastEmployeeButton.Click += new System.EventHandler(this.LastEmployeeButton_Click);
             // 
             // SingleEmployeeForm
             // 

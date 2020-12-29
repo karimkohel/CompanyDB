@@ -23,9 +23,14 @@ namespace CompanyUI
 
         private void SingleEmployeeForm_Load(object sender, EventArgs e)
         {
+            // load first employee
             currentEmployee = getEmployee(1);
             loadEmpToUi(currentEmployee);
             lastEmployee = GlobalConnector.Employees.Last();
+
+            // load departments in department comb box
+            int[] departmentsNumbers = GlobalConnector.Departments.Select(x => x.Number).ToArray();
+            DepartmentComboBox.DataSource = departmentsNumbers;
         }
 
         #region Buttons
@@ -68,6 +73,26 @@ namespace CompanyUI
                 currentEmployee = emp;
                 loadEmpToUi(emp);
             }
+        }
+        private void PreviousEmployeeButton_Click(object sender, EventArgs e)
+        {
+            if (currentEmployee.Id != 1)
+            {
+                Employee emp = GlobalConnector.Employees.First(i => i.Id == currentEmployee.Id - 1);
+                currentEmployee = emp;
+                loadEmpToUi(emp);
+            }
+        }
+        private void LastEmployeeButton_Click(object sender, EventArgs e)
+        {
+            loadEmpToUi(lastEmployee);
+            currentEmployee = lastEmployee;
+        }
+        private void FirstEmployeeButton_Click(object sender, EventArgs e)
+        {
+            Employee emp = getEmployee(1);
+            loadEmpToUi(emp);
+            currentEmployee = emp;
         }
         #endregion
 

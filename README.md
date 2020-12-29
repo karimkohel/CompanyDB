@@ -18,11 +18,11 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Load Database implementation (Text files)
     - [X] Create new database
     - [X] Add data in employee list box
-    - [ ] **Single employee lookup logic**
+    - [X] Single employee lookup logic
+    - [X] Reload home list boxes
     - [ ] Search logic
-    - [ ] Add data into home list boxes after every save
-    - [ ] Exception handling for file reading  
     - [ ] Feature if object already exists
+    - [ ] Exception handling for file reading  
     - [ ] Resolve writeaccesviolationException when writing file in C drive
     - [X] Employees class
         - [X] Base class
@@ -38,13 +38,13 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Home Page
     - [X] Add employee page
     - [X] Add department page
-    - [ ] Single Employee sheet page
-        - [ ] Repair department combobox 
-    - [ ] Employee search
+    - [X] Single Employee sheet page
+    - [ ] **Employee search**
     - [ ] Salary summation and other stats
     - [ ] Department search
     - [ ] About Buttons
     - [ ] Make enter key submit forms
+    - [ ] Remove connecting database succes msg
 
 
 ### License 

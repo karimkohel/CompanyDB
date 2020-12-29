@@ -186,6 +186,7 @@ namespace CompanyUI
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(190, 23);
             this.searchToolStripMenuItem.Tag = "";
             this.searchToolStripMenuItem.ToolTipText = "\r\n";
+            this.searchToolStripMenuItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchToolStripMenuItem_KeyPress);
             // 
             // searchToolStripMenuItem1
             // 

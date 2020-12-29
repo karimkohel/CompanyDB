@@ -61,6 +61,7 @@ namespace CompanyUI
         #endregion
 
         #region Private helpers
+
         /// <summary>
         /// Private helper method that checks validity of Add Employee Form
         /// </summary>

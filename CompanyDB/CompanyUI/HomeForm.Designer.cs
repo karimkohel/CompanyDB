@@ -98,27 +98,27 @@ namespace CompanyUI
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
             this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // newDepartmentToolStripMenuItem
             // 
             this.newDepartmentToolStripMenuItem.Name = "newDepartmentToolStripMenuItem";
-            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newDepartmentToolStripMenuItem.Text = "New Department";
             this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
             // 
             // searchEmployeeToolStripMenuItem
             // 
             this.searchEmployeeToolStripMenuItem.Name = "searchEmployeeToolStripMenuItem";
-            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.searchEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchEmployeeToolStripMenuItem.Text = "Search Employee";
             // 
             // searchDepartmentToolStripMenuItem
             // 
             this.searchDepartmentToolStripMenuItem.Name = "searchDepartmentToolStripMenuItem";
-            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.searchDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchDepartmentToolStripMenuItem.Text = "Search Department";
             // 
             // editToolStripMenuItem
@@ -207,8 +207,9 @@ namespace CompanyUI
             // findEmployeeToolStripMenuItem
             // 
             this.findEmployeeToolStripMenuItem.Name = "findEmployeeToolStripMenuItem";
-            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.findEmployeeToolStripMenuItem.Text = "Find employee";
+            this.findEmployeeToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.findEmployeeToolStripMenuItem.Text = "Find single employee";
+            this.findEmployeeToolStripMenuItem.Click += new System.EventHandler(this.findEmployeeToolStripMenuItem_Click);
             // 
             // findDepartmentToolStripMenuItem
             // 
@@ -216,7 +217,7 @@ namespace CompanyUI
             this.findDepartmentEmployeesToolStripMenuItem,
             this.findDepartmentSalaryToolStripMenuItem});
             this.findDepartmentToolStripMenuItem.Name = "findDepartmentToolStripMenuItem";
-            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.findDepartmentToolStripMenuItem.Text = "Find Department";
             // 
             // findDepartmentEmployeesToolStripMenuItem

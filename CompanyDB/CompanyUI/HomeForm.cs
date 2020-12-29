@@ -18,6 +18,42 @@ namespace CompanyUI
             InitializeComponent();
         }
 
+
+        #region File Strip menu
+        private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!checkDBLoaded())
+            {
+                dbErrorMsg();
+            }
+            else if(GlobalConnector.Departments == null)
+            {
+                string msg = "Must create Departments first then create Employees";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                Form addEmployee = new EmployeeForm();
+                addEmployee.Show();
+            }
+        }
+
+        private void newDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (checkDBLoaded())
+            {
+                Form addDepartment = new DepartmentForm();
+                addDepartment.Show();
+            }
+            else
+            {
+                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
         #region Edit strip menu items
         private void importDepDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -60,38 +96,17 @@ namespace CompanyUI
         }
         #endregion
 
-        #region File Strip menu
-        private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        #region Find Strip menu items
+        private void findEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!checkDBLoaded())
             {
-                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
-                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(GlobalConnector.Departments == null)
-            {
-                string msg = "Must create Departments first then create Employees";
-                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                dbErrorMsg();
             }
             else
             {
-                Form addEmployee = new EmployeeForm();
-                addEmployee.Show();
-            }
-        }
-
-        private void newDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (checkDBLoaded())
-            {
-                Form addDepartment = new DepartmentForm();
-                addDepartment.Show();
-            }
-            else
-            {
-                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
-                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Form singleEmpForm = new SingleEmployeeForm();
+                singleEmpForm.Show();
             }
         }
         #endregion
@@ -142,6 +157,12 @@ namespace CompanyUI
             //hide db options
             LoadEmployeeDBButton.Hide();
             CreateEmployeeDbButton.Hide();
+        }
+
+        private void dbErrorMsg()
+        {
+            string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
+            MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         #endregion
 

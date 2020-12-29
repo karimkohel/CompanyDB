@@ -217,8 +217,8 @@ namespace CompanyUI
             // findDepartmentToolStripMenuItem
             // 
             this.findDepartmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findDepartmentEmployeesToolStripMenuItem,
-            this.findDepartmentSalaryToolStripMenuItem});
+            this.findDepartmentSalaryToolStripMenuItem,
+            this.findDepartmentEmployeesToolStripMenuItem});
             this.findDepartmentToolStripMenuItem.Name = "findDepartmentToolStripMenuItem";
             this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.findDepartmentToolStripMenuItem.Text = "Find Department";

@@ -20,6 +20,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Add data in employee list box
     - [X] Single employee lookup logic
     - [X] Reload home list boxes
+    - [ ] **Salary Summation Logic**
     - [ ] Search logic
     - [ ] Feature if object already exists
     - [ ] Exception handling for file reading  
@@ -40,7 +41,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Add department page
     - [X] Single Employee sheet page
     - [X] Employee search
-    - [ ] **Salary summation and other stats**
+    - [X] Salary summation and other stats page
     - [ ] Department search
     - [ ] About Buttons
     - [ ] Make enter key submit forms

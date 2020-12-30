@@ -160,6 +160,24 @@ namespace CompanyUI
                 singleEmpForm.Show();
             }
         }
+        private void findDepartmentEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!checkDBLoaded())
+            {
+                dbErrorMsg();
+            }
+            else if(GlobalConnector.Departments == null || GlobalConnector.Employees == null)
+            {
+                string msg = "Must Create Departments and Employees first";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Form depEmps = new DepartmentEmployees();
+                depEmps.Show();
+            }
+        }
+
         #endregion
 
         #region Refresh Buttons

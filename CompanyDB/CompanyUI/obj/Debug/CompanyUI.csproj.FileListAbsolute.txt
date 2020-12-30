@@ -16,3 +16,4 @@ K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.Sing
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.csproj.CopyComplete
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.SearchEmployee.resources
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.DepartmentsStats.resources
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.DepartmentEmployees.resources

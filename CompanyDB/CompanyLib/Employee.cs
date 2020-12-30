@@ -35,6 +35,11 @@ namespace CompanyLib
             this.DepartmentNumber = depNumber;
         }
 
+        public string getFullName()
+        {
+            return FisrtName + " " + LastName;
+        }
+
     }
 
 }

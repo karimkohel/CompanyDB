@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompanyLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,29 @@ namespace CompanyUI
         {
             InitializeComponent();
         }
+
+        private void DepartmentEmployees_Load(object sender, EventArgs e)
+        {
+            // load departments by name in combo box
+            DepartmentComboBox.DataSource = GlobalConnector.Departments.Select(x => x.Name).ToArray();
+            // load emps in deps
+            GlobalConnector.LoadEmployeesInDepartments();
+        }
+        private void DepartmentComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            // clear any past data from list
+            EmployeeListBox.Text = "";
+
+            // get dep from combo box by name from global list
+            Department dep = GlobalConnector.Departments.Find(d => d.Name == DepartmentComboBox.Text);
+
+            // get list of employees in said department &  place fullnames in listbox
+            EmployeeListBox.DataSource = dep.Employees.Select(emp => emp.getFullName()).ToArray(); ;
+        }
+        private void DoneButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

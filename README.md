@@ -33,7 +33,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
     - [X] Exception handling for file reading and writing
-    - [ ] Feature if object already exists dont create it again
+    - [ ] **Feature if object already exists dont create it again**
     - [ ] Feature Remove Employee or Dep
 
 - [ ] Front end
@@ -48,7 +48,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Remove connecting database succes msg
     - [X] Make enter key submit forms
     - [X] Include more details in emp and dep list boxes in all forms
-    - [ ] About Buttons (With web-browser)
+    - [X] About Buttons (With web-browser)
     - [ ] Enhance user notices for wrong entry 
 
 

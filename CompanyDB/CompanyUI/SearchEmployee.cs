@@ -23,7 +23,7 @@ namespace CompanyUI
         {
 
             List<Employee> emps = getEmployees();
-            string[] empNames = emps.Select(x => x.FisrtName).ToArray();
+            string[] empNames = emps.Select(x => x.getFullName()).ToArray();
             EmployeeListBox.DataSource = empNames;
         }
 

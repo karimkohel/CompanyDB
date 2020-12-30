@@ -273,7 +273,7 @@ namespace CompanyUI
         }
         private void loadEmpList()
         {
-            string[] empNames = GlobalConnector.Employees.Select(e => e.LastName).ToArray();
+            string[] empNames = GlobalConnector.Employees.Select(e => e.getFullName()).ToArray();
             EmployeeListBox.DataSource = empNames;
         }
         #endregion

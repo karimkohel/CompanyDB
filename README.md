@@ -47,8 +47,8 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Add refresh both dbs in file strip menu
     - [X] Remove connecting database succes msg
     - [X] Make enter key submit forms
+    - [X] Include more details in emp and dep list boxes in all forms
     - [ ] About Buttons (With web-browser)
-    - [ ] Include more details in emp and dep list boxes in all forms
     - [ ] Enhance user notices for wrong entry 
 
 

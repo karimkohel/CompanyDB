@@ -143,7 +143,7 @@ namespace CompanyUI
             "X",
             "Y",
             "Z"});
-            this.MinitComboBox.Location = new System.Drawing.Point(581, 250);
+            this.MinitComboBox.Location = new System.Drawing.Point(581, 259);
             this.MinitComboBox.Name = "MinitComboBox";
             this.MinitComboBox.Size = new System.Drawing.Size(325, 38);
             this.MinitComboBox.TabIndex = 16;
@@ -363,15 +363,18 @@ namespace CompanyUI
             // 
             this.EmployeeBirthdaydateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmployeeBirthdaydateTimePicker.Location = new System.Drawing.Point(120, 251);
+            this.EmployeeBirthdaydateTimePicker.MaxDate = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
+            this.EmployeeBirthdaydateTimePicker.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
             this.EmployeeBirthdaydateTimePicker.Name = "EmployeeBirthdaydateTimePicker";
             this.EmployeeBirthdaydateTimePicker.Size = new System.Drawing.Size(326, 36);
             this.EmployeeBirthdaydateTimePicker.TabIndex = 14;
+            this.EmployeeBirthdaydateTimePicker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // DepartmentComboBox
             // 
             this.DepartmentComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 96);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(581, 105);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(325, 38);
             this.DepartmentComboBox.TabIndex = 15;

@@ -355,9 +355,12 @@ namespace CompanyUI
             // 
             this.EmployeeBirthdaydateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmployeeBirthdaydateTimePicker.Location = new System.Drawing.Point(120, 251);
+            this.EmployeeBirthdaydateTimePicker.MaxDate = new System.DateTime(2002, 12, 31, 0, 0, 0, 0);
+            this.EmployeeBirthdaydateTimePicker.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
             this.EmployeeBirthdaydateTimePicker.Name = "EmployeeBirthdaydateTimePicker";
             this.EmployeeBirthdaydateTimePicker.Size = new System.Drawing.Size(326, 36);
             this.EmployeeBirthdaydateTimePicker.TabIndex = 14;
+            this.EmployeeBirthdaydateTimePicker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // DepartmentComboBox
             // 

@@ -31,6 +31,7 @@ namespace CompanyUI
             loadStatsWith(deps);
             
             // get summation of salary for each elemenet (department)
+            // CONTINUE HERE
         }
 
 

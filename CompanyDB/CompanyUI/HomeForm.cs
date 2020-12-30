@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -213,6 +214,10 @@ namespace CompanyUI
             string msg = "Hello, My name is karim kohel and I'm the sole developer behind this winforms app.\nI wish you a pleasant time using the app";
             msg +=       " and if you wish to learn more about me you can feel free to contact me";
             MessageBox.Show(msg, "Hello", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void contactUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.karimkohel.com");
         }
 
         #endregion

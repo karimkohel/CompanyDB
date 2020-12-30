@@ -251,6 +251,7 @@ namespace CompanyUI
             this.contactUsToolStripMenuItem.Name = "contactUsToolStripMenuItem";
             this.contactUsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contactUsToolStripMenuItem.Text = "Contact Developer";
+            this.contactUsToolStripMenuItem.Click += new System.EventHandler(this.contactUsToolStripMenuItem_Click);
             // 
             // EmployeeListBox
             // 

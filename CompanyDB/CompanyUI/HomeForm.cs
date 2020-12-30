@@ -34,7 +34,7 @@ namespace CompanyUI
                 }
                 else if(searchToolStripMenuItem.Text.Any(char.IsDigit) && searchToolStripMenuItem.Text.Any(char.IsLetter))
                 {
-                    string msg = "Can only Search by SSN or employee name not both";
+                    string msg = "Search by either Employee SSN, Employee Name or Employee Address";
                     MessageBox.Show(msg, "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else

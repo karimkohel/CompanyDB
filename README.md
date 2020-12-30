@@ -13,7 +13,7 @@ Company database program that features a GUI with multiple forms and screens to 
 ![Demo picture](https://raw.githubusercontent.com/karimkohel/CompanyDB/main/example1.PNG "Demo")
 
 
-#### Roadmap
+#### TODO
 - [ ] Back end
     - [X] Load Database implementation (Text files)
     - [X] Create new database
@@ -22,7 +22,6 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Search logic
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
-    - [ ] **Add search by address to search logic**
     - [ ] Feature if object already exists
     - [ ] Exception handling for file reading  
     - [ ] Resolve writeaccesviolationException when writing file in C drive
@@ -44,11 +43,12 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Employee search
     - [X] Salary summation and other stats page
     - [ ] Form for all departments and their respected employees (combo box for dep and list for employees in said dep)
-    - [ ] Add refresh both dbs in file strip menu
     - [ ] About Buttons
+    - [ ] Add refresh both dbs in file strip menu
     - [ ] Include more details in emp and dep list boxes in all forms
     - [ ] Make enter key submit forms
     - [ ] Remove connecting database succes msg
+    - [ ] Enhance user notices for wrong entry 
 
 
 ### License 

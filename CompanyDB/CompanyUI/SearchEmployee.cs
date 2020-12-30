@@ -41,10 +41,7 @@ namespace CompanyUI
             {
                 emps = GlobalConnector.Employees.FindAll(z => z.FisrtName.Contains(SearchTerm));
                 emps.AddRange(GlobalConnector.Employees.FindAll(z => z.LastName.Contains(SearchTerm)));
-            }
-            else
-            {
-                emps = null;
+                emps.AddRange(GlobalConnector.Employees.FindAll(z => z.Address.Contains(SearchTerm)));
             }
 
             return emps;

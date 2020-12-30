@@ -217,5 +217,26 @@ namespace CompanyUI
         }
         #endregion
 
+        /// <summary>
+        /// Launches all departments stats and salaries form while db is loaded only
+        /// </summary>
+        private void findDepartmentSalaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!checkDBLoaded())
+            {
+                dbErrorMsg();
+            }
+            else if(GlobalConnector.Employees == null || GlobalConnector.Departments == null)
+            {
+                string msg = "Must Create Employees and Departments first";
+                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Form departmentSalaries = new DepartmentsStats();
+                departmentSalaries.Show();
+            }
+            // launch statsform 
+        }
     }
 }

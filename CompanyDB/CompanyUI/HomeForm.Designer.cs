@@ -48,8 +48,8 @@ namespace CompanyUI
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findDepartmentEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findDepartmentSalaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findDepartmentEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.findMoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -223,17 +223,18 @@ namespace CompanyUI
             this.findDepartmentToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.findDepartmentToolStripMenuItem.Text = "Find Department";
             // 
-            // findDepartmentEmployeesToolStripMenuItem
-            // 
-            this.findDepartmentEmployeesToolStripMenuItem.Name = "findDepartmentEmployeesToolStripMenuItem";
-            this.findDepartmentEmployeesToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.findDepartmentEmployeesToolStripMenuItem.Text = "Find Department Employees";
-            // 
             // findDepartmentSalaryToolStripMenuItem
             // 
             this.findDepartmentSalaryToolStripMenuItem.Name = "findDepartmentSalaryToolStripMenuItem";
-            this.findDepartmentSalaryToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.findDepartmentSalaryToolStripMenuItem.Text = "Find All Departments Salary";
+            this.findDepartmentSalaryToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.findDepartmentSalaryToolStripMenuItem.Text = "Find All Departments Salaries";
+            this.findDepartmentSalaryToolStripMenuItem.Click += new System.EventHandler(this.findDepartmentSalaryToolStripMenuItem_Click);
+            // 
+            // findDepartmentEmployeesToolStripMenuItem
+            // 
+            this.findDepartmentEmployeesToolStripMenuItem.Name = "findDepartmentEmployeesToolStripMenuItem";
+            this.findDepartmentEmployeesToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.findDepartmentEmployeesToolStripMenuItem.Text = "Find Department Employees";
             // 
             // aboutToolStripMenuItem
             // 

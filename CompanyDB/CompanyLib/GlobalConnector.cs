@@ -35,6 +35,11 @@ namespace CompanyLib
         #endregion
 
         #region Department Serializers
+
+        /// <summary>
+        /// loads departemnt from file system to a global list of departments
+        /// </summary>
+        /// <param name="filePath">system file path to departments csv file</param>
         public static void LoadDepartments(string filePath)
         {
             List<string> lines = ConnectDBFile(filePath);
@@ -73,6 +78,24 @@ namespace CompanyLib
             // write DB to disk
             File.WriteAllLines(GlobalConnector.DepartmentFilePath, lines);
         }
+
+        /// <summary>
+        /// Loads employees in departments employee list property
+        /// </summary>
+        public static void LoadEmployeesInDepartments()
+        {
+            if(GlobalConnector.Departments == null || GlobalConnector.Employees == null)
+            {
+                throw new NullReferenceException("DB has no entries");
+            }
+
+            foreach(Department dep in GlobalConnector.Departments)
+            {
+                // one liner to get all employees from employee db with same number as each department and add them all to said department employee list
+                dep.Employees.AddRange(GlobalConnector.Employees.FindAll(x => x.DepartmentNumber == dep.Number));
+            }
+        }
+
         #endregion
 
         #region Employee Serializers

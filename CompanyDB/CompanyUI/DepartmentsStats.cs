@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompanyLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,13 +17,41 @@ namespace CompanyUI
         {
             InitializeComponent();
         }
-        // check db bfore coming to here
+
         private void DepartmentsStats_Load(object sender, EventArgs e)
         {
-            // get departments in local list
-            // get count of departments
-            // put count in ui
+            // load employees into departments list freom static method in globalConnector
+            GlobalConnector.LoadEmployeesInDepartments();
+
+            // get departments copy in local list
+            List<Department> deps = new List<Department>(GlobalConnector.Departments);
+
+
+            // get count of departments and other stat and put in ui
+            loadStatsWith(deps);
+            
             // get summation of salary for each elemenet (department)
         }
+
+
+        #region Helpers
+        private void loadStatsWith(List<Department> deps)
+        {
+            // get departments count and place in ui
+            TotalDepVarLabel.Text = deps.Count.ToString();
+
+            // get departments summation of salaries and place in ui
+            double allSalaries = 0;
+            foreach(Department dep in deps)
+            {
+                foreach(Employee emp in dep.Employees)
+                {
+                    allSalaries += emp.Salary;
+                }
+            }
+
+            TotalSalariesVarLabel.Text = allSalaries.ToString();
+        }
+        #endregion
     }
 }

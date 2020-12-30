@@ -16,6 +16,7 @@ namespace CompanyUI
         {
             InitializeComponent();
         }
+        // check db bfore coming to here
         private void DepartmentsStats_Load(object sender, EventArgs e)
         {
             // get departments in local list

@@ -37,7 +37,9 @@ namespace CompanyUI
             this.TotalDepVarLabel = new System.Windows.Forms.Label();
             this.TotalSalariesVarLabel = new System.Windows.Forms.Label();
             this.DepInfoDoneButton = new System.Windows.Forms.Button();
+            this.DepSalaryDataGridView = new System.Windows.Forms.DataGridView();
             this.DepInfoTabelPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DepSalaryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // DepInfoTitleLabel
@@ -47,7 +49,7 @@ namespace CompanyUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DepInfoTitleLabel.AutoSize = true;
             this.DepInfoTitleLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepInfoTitleLabel.Location = new System.Drawing.Point(207, 9);
+            this.DepInfoTitleLabel.Location = new System.Drawing.Point(263, 9);
             this.DepInfoTitleLabel.Name = "DepInfoTitleLabel";
             this.DepInfoTitleLabel.Size = new System.Drawing.Size(190, 39);
             this.DepInfoTitleLabel.TabIndex = 3;
@@ -69,17 +71,17 @@ namespace CompanyUI
             this.DepInfoTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.DepInfoTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.DepInfoTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.DepInfoTabelPanel.Size = new System.Drawing.Size(580, 366);
+            this.DepInfoTabelPanel.Size = new System.Drawing.Size(730, 76);
             this.DepInfoTabelPanel.TabIndex = 4;
             // 
             // TotalSalaryLabel
             // 
             this.TotalSalaryLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalSalaryLabel.AutoSize = true;
-            this.TotalSalaryLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSalaryLabel.Location = new System.Drawing.Point(7, 255);
+            this.TotalSalaryLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalSalaryLabel.Location = new System.Drawing.Point(50, 40);
             this.TotalSalaryLabel.Name = "TotalSalaryLabel";
-            this.TotalSalaryLabel.Size = new System.Drawing.Size(195, 39);
+            this.TotalSalaryLabel.Size = new System.Drawing.Size(164, 33);
             this.TotalSalaryLabel.TabIndex = 5;
             this.TotalSalaryLabel.Text = "Total Salaries:";
             this.TotalSalaryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -88,10 +90,10 @@ namespace CompanyUI
             // 
             this.TotalDepLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalDepLabel.AutoSize = true;
-            this.TotalDepLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalDepLabel.Location = new System.Drawing.Point(5, 52);
+            this.TotalDepLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalDepLabel.Location = new System.Drawing.Point(19, 2);
             this.TotalDepLabel.Name = "TotalDepLabel";
-            this.TotalDepLabel.Size = new System.Drawing.Size(199, 78);
+            this.TotalDepLabel.Size = new System.Drawing.Size(225, 33);
             this.TotalDepLabel.TabIndex = 4;
             this.TotalDepLabel.Text = "Total Departments:";
             this.TotalDepLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,10 +102,10 @@ namespace CompanyUI
             // 
             this.TotalDepVarLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalDepVarLabel.AutoSize = true;
-            this.TotalDepVarLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalDepVarLabel.Location = new System.Drawing.Point(370, 72);
+            this.TotalDepVarLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalDepVarLabel.Location = new System.Drawing.Point(476, 2);
             this.TotalDepVarLabel.Name = "TotalDepVarLabel";
-            this.TotalDepVarLabel.Size = new System.Drawing.Size(49, 39);
+            this.TotalDepVarLabel.Size = new System.Drawing.Size(41, 33);
             this.TotalDepVarLabel.TabIndex = 6;
             this.TotalDepVarLabel.Text = "<>";
             this.TotalDepVarLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -112,10 +114,10 @@ namespace CompanyUI
             // 
             this.TotalSalariesVarLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalSalariesVarLabel.AutoSize = true;
-            this.TotalSalariesVarLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSalariesVarLabel.Location = new System.Drawing.Point(370, 255);
+            this.TotalSalariesVarLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalSalariesVarLabel.Location = new System.Drawing.Point(476, 40);
             this.TotalSalariesVarLabel.Name = "TotalSalariesVarLabel";
-            this.TotalSalariesVarLabel.Size = new System.Drawing.Size(49, 39);
+            this.TotalSalariesVarLabel.Size = new System.Drawing.Size(41, 33);
             this.TotalSalariesVarLabel.TabIndex = 7;
             this.TotalSalariesVarLabel.Text = "<>";
             this.TotalSalariesVarLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -126,18 +128,32 @@ namespace CompanyUI
             this.DepInfoDoneButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DepInfoDoneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DepInfoDoneButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepInfoDoneButton.Location = new System.Drawing.Point(248, 432);
+            this.DepInfoDoneButton.Location = new System.Drawing.Point(315, 530);
             this.DepInfoDoneButton.Name = "DepInfoDoneButton";
             this.DepInfoDoneButton.Size = new System.Drawing.Size(109, 35);
             this.DepInfoDoneButton.TabIndex = 10;
             this.DepInfoDoneButton.Text = "Done";
             this.DepInfoDoneButton.UseVisualStyleBackColor = false;
             // 
+            // DepSalaryDataGridView
+            // 
+            this.DepSalaryDataGridView.AllowUserToAddRows = false;
+            this.DepSalaryDataGridView.AllowUserToDeleteRows = false;
+            this.DepSalaryDataGridView.BackgroundColor = System.Drawing.Color.Silver;
+            this.DepSalaryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DepSalaryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DepSalaryDataGridView.Location = new System.Drawing.Point(12, 133);
+            this.DepSalaryDataGridView.Name = "DepSalaryDataGridView";
+            this.DepSalaryDataGridView.ReadOnly = true;
+            this.DepSalaryDataGridView.Size = new System.Drawing.Size(730, 380);
+            this.DepSalaryDataGridView.TabIndex = 11;
+            // 
             // DepartmentsStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 40F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 489);
+            this.ClientSize = new System.Drawing.Size(754, 577);
+            this.Controls.Add(this.DepSalaryDataGridView);
             this.Controls.Add(this.DepInfoDoneButton);
             this.Controls.Add(this.DepInfoTabelPanel);
             this.Controls.Add(this.DepInfoTitleLabel);
@@ -149,6 +165,7 @@ namespace CompanyUI
             this.Load += new System.EventHandler(this.DepartmentsStats_Load);
             this.DepInfoTabelPanel.ResumeLayout(false);
             this.DepInfoTabelPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DepSalaryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +180,6 @@ namespace CompanyUI
         private System.Windows.Forms.Label TotalDepVarLabel;
         private System.Windows.Forms.Label TotalSalariesVarLabel;
         private System.Windows.Forms.Button DepInfoDoneButton;
+        private System.Windows.Forms.DataGridView DepSalaryDataGridView;
     }
 }

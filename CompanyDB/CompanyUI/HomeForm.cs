@@ -207,6 +207,16 @@ namespace CompanyUI
 
         #endregion
 
+        #region About strip menu items
+        private void findMoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string msg = "Hello, My name is karim kohel and I'm the sole developer behind this winforms app.\nI wish you a pleasant time using the app";
+            msg +=       " and if you wish to learn more about me you can feel free to contact me";
+            MessageBox.Show(msg, "Hello", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        #endregion
+
         #region Refresh Buttons
         private void EmpReloadButton_Click(object sender, EventArgs e)
         {

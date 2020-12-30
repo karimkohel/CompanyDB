@@ -22,10 +22,10 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Search logic
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
+    - [ ] **Exception handling for file reading**  
+    - [ ] Resolve writeaccesviolationException when writing file in C drive
     - [ ] Feature if object already exists dont create it again
     - [ ] Feature Remove Employee or Dep
-    - [ ] Exception handling for file reading  
-    - [ ] Resolve writeaccesviolationException when writing file in C drive
     - [X] Employees class
         - [X] Base class
         - [x] User input filteration
@@ -45,7 +45,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Salary summation and other stats page
     - [X] Form for all departments and their respected employees
     - [X] Add refresh both dbs in file strip menu
-    - [ ] *Remove connecting database succes msg*
+    - [X] Remove connecting database succes msg
     - [ ] About Buttons (With web-browser)
     - [ ] Include more details in emp and dep list boxes in all forms
     - [ ] Make enter key submit forms

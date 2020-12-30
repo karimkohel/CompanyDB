@@ -226,9 +226,6 @@ namespace CompanyUI
                 loadDepList();
             }
 
-            // show succes to user
-            MessageBox.Show("Successfully added Department Database", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             // hide db option after loading db
             LoadDepartmentDBButton.Hide();
             CreateDepartmentDbButton.Hide();
@@ -242,9 +239,6 @@ namespace CompanyUI
             {
                 loadEmpList();
             }
-
-            // show success msg to user
-            MessageBox.Show("Successfully added Employee Database", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //hide db options
             LoadEmployeeDBButton.Hide();

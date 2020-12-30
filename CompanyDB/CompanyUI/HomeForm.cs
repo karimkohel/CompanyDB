@@ -76,10 +76,23 @@ namespace CompanyUI
             }
             else
             {
-                string msg = "Must Initialize Both Databases before creating any entries:\n- Home page > Edit > Connect Employee Database & Connect Department Database";
-                MessageBox.Show(msg, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dbErrorMsg();
             }
         }
+
+        private void refreshDatabasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (checkDBLoaded())
+            {
+                loadDepList();
+                loadEmpList();
+            }
+            else
+            {
+                dbErrorMsg();
+            }
+        }
+
         #endregion
 
         #region Edit strip menu items

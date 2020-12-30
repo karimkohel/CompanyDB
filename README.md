@@ -44,11 +44,11 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Employee search
     - [X] Salary summation and other stats page
     - [X] Form for all departments and their respected employees
+    - [X] Add refresh both dbs in file strip menu
+    - [ ] *Remove connecting database succes msg*
     - [ ] About Buttons (With web-browser)
-    - [ ] Add refresh both dbs in file strip menu
     - [ ] Include more details in emp and dep list boxes in all forms
     - [ ] Make enter key submit forms
-    - [ ] Remove connecting database succes msg
     - [ ] Enhance user notices for wrong entry 
 
 

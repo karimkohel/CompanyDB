@@ -98,22 +98,23 @@ namespace CompanyUI
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
             this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // newDepartmentToolStripMenuItem
             // 
             this.newDepartmentToolStripMenuItem.Name = "newDepartmentToolStripMenuItem";
-            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newDepartmentToolStripMenuItem.Text = "New Department";
             this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
             // 
             // refreshDatabasesToolStripMenuItem
             // 
             this.refreshDatabasesToolStripMenuItem.Name = "refreshDatabasesToolStripMenuItem";
-            this.refreshDatabasesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.refreshDatabasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.refreshDatabasesToolStripMenuItem.Text = "Refresh Databases";
+            this.refreshDatabasesToolStripMenuItem.Click += new System.EventHandler(this.refreshDatabasesToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 

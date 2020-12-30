@@ -55,7 +55,7 @@ Company database program that features a GUI with multiple forms and screens to 
 ### License 
 > Live and let Live
 
-This code is public for a reason, reason being **it's fair game**.
+This Repo is public for a reason, reason being **it's fair game**.
 any one observent enough to find it on my github is allowed to plagiarize the whole project if he wishes to.
 
 *may the odds be ever in your favor*

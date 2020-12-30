@@ -102,10 +102,17 @@ namespace CompanyUI
 
             if(HomeOpenFileDialoge.FileName.Length != 0) 
             {
-                GlobalConnector.DepartmentFilePath = HomeOpenFileDialoge.FileName;
-                GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
+                try
+                {
+                    GlobalConnector.DepartmentFilePath = HomeOpenFileDialoge.FileName;
+                    GlobalConnector.LoadDepartments(GlobalConnector.DepartmentFilePath);
 
-                afterDepDBLoad();
+                    afterDepDBLoad();
+                }
+                catch
+                {
+                    MessageBox.Show("File is not a compatible as a Database file", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
         }
@@ -122,10 +129,17 @@ namespace CompanyUI
             HomeOpenFileDialoge.ShowDialog();
             if (HomeOpenFileDialoge.FileName.Length != 0)
             {
-                GlobalConnector.EmployeeFilePath = HomeOpenFileDialoge.FileName;
-                GlobalConnector.LoadEmployees(GlobalConnector.EmployeeFilePath);
+                try
+                {
+                    GlobalConnector.EmployeeFilePath = HomeOpenFileDialoge.FileName;
+                    GlobalConnector.LoadEmployees(GlobalConnector.EmployeeFilePath);
                 
-                afterEmpDBLoad();
+                    afterEmpDBLoad();
+                }
+                catch
+                {
+                    MessageBox.Show("File is not a compatible as a Database file", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
         }

@@ -22,7 +22,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Search logic
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
-    - [ ] **Exception handling for file reading**  
+    - [ ] **Exception handling for file reading and writing**  
     - [ ] Resolve writeaccesviolationException when writing file in C drive
     - [ ] Feature if object already exists dont create it again
     - [ ] Feature Remove Employee or Dep

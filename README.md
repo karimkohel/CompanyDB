@@ -14,18 +14,8 @@ Company database program that features a GUI with multiple forms and screens to 
 
 
 #### TODO
+- [ ] Rigorous and random testing
 - [ ] Back end
-    - [X] Load Database implementation (Text files)
-    - [X] Create new database
-    - [X] Add data in employee list box
-    - [X] Single employee lookup logic
-    - [X] Search logic
-    - [X] Reload home list boxes
-    - [X] Salary Summation Logic
-    - [ ] **Exception handling for file reading and writing**  
-    - [ ] Resolve writeaccesviolationException when writing file in C drive
-    - [ ] Feature if object already exists dont create it again
-    - [ ] Feature Remove Employee or Dep
     - [X] Employees class
         - [X] Base class
         - [x] User input filteration
@@ -35,6 +25,16 @@ Company database program that features a GUI with multiple forms and screens to 
         - [X] Base Class
         - [X] User input filtration
         - [X] Serialization
+    - [X] Load Database implementation (Text files)
+    - [X] Create new database
+    - [X] Add data in employee list box
+    - [X] Single employee lookup logic
+    - [X] Search logic
+    - [X] Reload home list boxes
+    - [X] Salary Summation Logic
+    - [X] Exception handling for file reading and writing
+    - [ ] Feature if object already exists dont create it again
+    - [ ] Feature Remove Employee or Dep
 
 - [ ] Front end
     - [X] Home Page
@@ -46,9 +46,9 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Form for all departments and their respected employees
     - [X] Add refresh both dbs in file strip menu
     - [X] Remove connecting database succes msg
+    - [X] Make enter key submit forms
     - [ ] About Buttons (With web-browser)
     - [ ] Include more details in emp and dep list boxes in all forms
-    - [ ] Make enter key submit forms
     - [ ] Enhance user notices for wrong entry 
 
 

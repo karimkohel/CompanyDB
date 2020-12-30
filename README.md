@@ -43,8 +43,8 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Single Employee sheet page
     - [X] Employee search
     - [X] Salary summation and other stats page
-    - [ ] Form for all departments and their respected employees
-    - [ ] Department search
+    - [ ] Form for all departments and their respected employees (combo box for dep and list for employees in said dep)
+    - [ ] Add refresh both dbs in file strip menu
     - [ ] About Buttons
     - [ ] Include more details in emp and dep list boxes in all forms
     - [ ] Make enter key submit forms

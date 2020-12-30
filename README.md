@@ -19,9 +19,9 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Create new database
     - [X] Add data in employee list box
     - [X] Single employee lookup logic
+    - [X] Search logic
     - [X] Reload home list boxes
-    - [ ] **Salary Summation Logic**
-    - [ ] Search logic
+    - [ ] *Salary Summation Logic*
     - [ ] Feature if object already exists
     - [ ] Exception handling for file reading  
     - [ ] Resolve writeaccesviolationException when writing file in C drive

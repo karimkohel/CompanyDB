@@ -22,6 +22,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Search logic
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
+    - [ ] Feature Remove Employee or Dep
     - [ ] Feature if object already exists
     - [ ] Exception handling for file reading  
     - [ ] Resolve writeaccesviolationException when writing file in C drive
@@ -42,7 +43,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Single Employee sheet page
     - [X] Employee search
     - [X] Salary summation and other stats page
-    - [ ] Form for all departments and their respected employees (combo box for dep and list for employees in said dep)
+    - [ ] **Form for all departments and their respected employees (combo box for dep and list for employees in said dep)**
     - [ ] About Buttons
     - [ ] Add refresh both dbs in file strip menu
     - [ ] Include more details in emp and dep list boxes in all forms

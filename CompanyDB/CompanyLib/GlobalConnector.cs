@@ -80,7 +80,7 @@ namespace CompanyLib
         }
 
         /// <summary>
-        /// Loads employees in departments employee list property
+        /// Loads employees in department's employee list property
         /// </summary>
         public static void LoadEmployeesInDepartments()
         {

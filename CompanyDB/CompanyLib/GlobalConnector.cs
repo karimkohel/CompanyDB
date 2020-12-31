@@ -96,10 +96,19 @@ namespace CompanyLib
                 throw new NullReferenceException("DB has no entries");
             }
 
-            foreach(Department dep in GlobalConnector.Departments)
+            foreach(Department dep in GlobalConnector.Departments) // check if employee already in list
             {
-                // one liner to get all employees from employee db with same number as each department and add them all to said department employee list
-                dep.Employees.AddRange(GlobalConnector.Employees.FindAll(x => x.DepartmentNumber == dep.Number));
+                // one liner to get all employees from employee db with same number as each department
+                List<Employee> empsInDep = GlobalConnector.Employees.FindAll(x => x.DepartmentNumber == dep.Number);
+
+                foreach(Employee emp in empsInDep)
+                {
+                    // add said employees to employee list in said department if he is not already in list
+                    if(!dep.Employees.Any(e => e.Id == emp.Id))
+                    {
+                        dep.Employees.Add(emp);
+                    }
+                }
             }
         }
 

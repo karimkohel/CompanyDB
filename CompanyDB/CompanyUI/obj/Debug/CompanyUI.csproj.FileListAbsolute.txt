@@ -17,3 +17,7 @@ K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.cspr
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.SearchEmployee.resources
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.DepartmentsStats.resources
 K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.DepartmentEmployees.resources
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\bin\Debug\CompanyUI.exe.manifest
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\bin\Debug\CompanyUI.application
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.exe.manifest
+K:\UNI\uni\S5\Programming\CompanyDB\CompanyDB\CompanyUI\obj\Debug\CompanyUI.application

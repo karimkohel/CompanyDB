@@ -65,6 +65,9 @@ namespace CompanyUI
             this.EmployeesLabel = new System.Windows.Forms.Label();
             this.EmpReloadButton = new System.Windows.Forms.Button();
             this.depReloadButton = new System.Windows.Forms.Button();
+            this.appDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tutorialVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.technicalDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,6 +236,7 @@ namespace CompanyUI
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.appDocumentationToolStripMenuItem,
             this.findMoreToolStripMenuItem,
             this.contactUsToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -403,6 +407,29 @@ namespace CompanyUI
             this.depReloadButton.Visible = false;
             this.depReloadButton.Click += new System.EventHandler(this.depReloadButton_Click);
             // 
+            // appDocumentationToolStripMenuItem
+            // 
+            this.appDocumentationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tutorialVideoToolStripMenuItem,
+            this.technicalDocumentationToolStripMenuItem});
+            this.appDocumentationToolStripMenuItem.Name = "appDocumentationToolStripMenuItem";
+            this.appDocumentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.appDocumentationToolStripMenuItem.Text = "Help";
+            // 
+            // tutorialVideoToolStripMenuItem
+            // 
+            this.tutorialVideoToolStripMenuItem.Name = "tutorialVideoToolStripMenuItem";
+            this.tutorialVideoToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.tutorialVideoToolStripMenuItem.Text = "Tutorial Video";
+            this.tutorialVideoToolStripMenuItem.Click += new System.EventHandler(this.tutorialVideoToolStripMenuItem_Click);
+            // 
+            // technicalDocumentationToolStripMenuItem
+            // 
+            this.technicalDocumentationToolStripMenuItem.Name = "technicalDocumentationToolStripMenuItem";
+            this.technicalDocumentationToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.technicalDocumentationToolStripMenuItem.Text = "Technical Documentation";
+            this.technicalDocumentationToolStripMenuItem.Click += new System.EventHandler(this.technicalDocumentationToolStripMenuItem_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -470,6 +497,9 @@ namespace CompanyUI
         private System.Windows.Forms.Button EmpReloadButton;
         private System.Windows.Forms.Button depReloadButton;
         private System.Windows.Forms.ToolStripMenuItem refreshDatabasesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem appDocumentationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tutorialVideoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem technicalDocumentationToolStripMenuItem;
     }
 }
 

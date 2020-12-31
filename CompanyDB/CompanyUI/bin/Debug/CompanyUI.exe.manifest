@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CompanyUI.exe" size="626696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CompanyUI.exe" size="627720">
       <assemblyIdentity name="CompanyUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9nGQvzlys110xDrW/+NjdlCt2OjI0uGQyhbnIFnxTiI=</dsig:DigestValue>
+        <dsig:DigestValue>z7JV3k4yCBe1oFTDdyUEIPC5f9AiAmEFtsvWmdC5alk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

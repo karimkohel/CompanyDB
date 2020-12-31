@@ -219,6 +219,14 @@ namespace CompanyUI
         {
             Process.Start("https://www.karimkohel.com");
         }
+        private void tutorialVideoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://youtu.be/S5bzzSTNCdY");
+        }
+        private void technicalDocumentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/karimkohel/CompanyDB/blob/main/README.md");
+        }
 
         #endregion
 

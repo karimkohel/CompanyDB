@@ -9,16 +9,17 @@ Company database program that features a GUI with multiple forms and screens to 
 ###  TO DO:
 ---
 
-##### Target:
+##### Look:
 ![Demo picture](https://raw.githubusercontent.com/karimkohel/CompanyDB/main/example1.PNG "Demo")
 
 
-#### TODO
-- [ ] Rigorous and random testing
+#### Tasks:
+- [X] Documentation
+- [X] Rigorous and random testing
     - [X] Resolve multiple names in departmentemployees (globalconn -> loadempsindep -> check emp duplication)
     - [X] Update employee acting funny (wromg department number)
     - [X] wrong names in departmentemployees
-- [ ] Back end
+- [x] Back end
     - [X] Employees class
         - [X] Base class
         - [x] User input filteration
@@ -36,9 +37,6 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
     - [X] Exception handling for file reading and writing
-    - [ ] Feature if object already exists dont create it again
-    - [ ] Feature Remove Employee or Dep
-
 - [X] Front end
     - [X] Home Page
     - [X] Add employee page
@@ -55,9 +53,4 @@ Company database program that features a GUI with multiple forms and screens to 
 
 
 ### License 
-> Live and let Live
-
-This Repo is public for a reason, reason being **it's fair game**.
-any one observent enough to find it on my github is allowed to plagiarize the whole project if he wishes to.
-
-*may the odds be ever in your favor*
+This is my private work for my second midterm evaluation

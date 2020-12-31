@@ -6,8 +6,11 @@
 
 Company database program that features a GUI with multiple forms and screens to read and write to said database of company employees.
 
-##### The Look:
+##### Demo Photo:
 ![Demo picture](https://raw.githubusercontent.com/karimkohel/CompanyDB/main/examplepic.PNG "Demo")
+
+##### Demo Video:
+[![Demo](http://img.youtube.com/vi/S5bzzSTNCdY/0.jpg)](http://www.youtube.com/watch?v=S5bzzSTNCdY "Demo")
 
 ---
 

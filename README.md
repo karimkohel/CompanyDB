@@ -36,7 +36,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [ ] **Feature if object already exists dont create it again**
     - [ ] Feature Remove Employee or Dep
 
-- [ ] Front end
+- [X] Front end
     - [X] Home Page
     - [X] Add employee page
     - [X] Add department page
@@ -49,7 +49,6 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Make enter key submit forms
     - [X] Include more details in emp and dep list boxes in all forms
     - [X] About Buttons (With web-browser)
-    - [ ] Enhance user notices for wrong entry 
 
 
 ### License 

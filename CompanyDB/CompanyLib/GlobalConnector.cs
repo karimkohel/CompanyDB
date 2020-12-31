@@ -58,9 +58,16 @@ namespace CompanyLib
         {
             // get max ID and add next one to current department
             int currID = 1;
-            if(GlobalConnector.Departments.Count > 0)
+            if(GlobalConnector.Departments == null)
             {
-                currID = GlobalConnector.Departments.OrderByDescending(x => x.Id).First().Id + 1;
+                GlobalConnector.Departments = new List<Department>();
+            }
+            else
+            {
+                if(GlobalConnector.Departments.Count > 0)
+                {
+                    currID = GlobalConnector.Departments.OrderByDescending(x => x.Id).First().Id + 1;
+                }
             }
 
             dep.Id = currID;
@@ -133,9 +140,16 @@ namespace CompanyLib
             if(emp.Id == 0)
             {
                 int CurrID = 1;
-                if(GlobalConnector.Employees.Count > 0)
+                if(GlobalConnector.Employees == null)
                 {
-                    CurrID = GlobalConnector.Employees.OrderByDescending(x => x.Id).First().Id + 1;
+                    GlobalConnector.Employees = new List<Employee>();
+                }
+                else
+                {
+                    if(GlobalConnector.Employees.Count > 0)
+                    {
+                        CurrID = GlobalConnector.Employees.OrderByDescending(x => x.Id).First().Id + 1;
+                    }
                 }
 
                 emp.Id = CurrID;

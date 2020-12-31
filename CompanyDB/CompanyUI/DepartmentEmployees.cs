@@ -20,9 +20,6 @@ namespace CompanyUI
 
         private void DepartmentEmployees_Load(object sender, EventArgs e)
         {
-            // clear list
-            EmployeeListBox.DataSource = new List<string>();
-
             // load departments by name in combo box
             DepartmentComboBox.DataSource = GlobalConnector.Departments.Select(x => x.Name).ToArray();
 
@@ -31,9 +28,6 @@ namespace CompanyUI
         }
         private void DepartmentComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            // clear any past data from list
-            EmployeeListBox.DataSource = new List<string>();
-
             // get dep from combo box by name from global list
             Department dep = GlobalConnector.Departments.Find(d => d.Name == DepartmentComboBox.Text);
 

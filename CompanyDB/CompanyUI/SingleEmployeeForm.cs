@@ -25,19 +25,19 @@ namespace CompanyUI
         {
             // load first employee
             currentEmployee = getEmployee(1);
-            loadEmpToUi(currentEmployee);
+
             lastEmployee = GlobalConnector.Employees.Last();
 
             // load departments in department comb box
-            int[] departmentsNumbers = GlobalConnector.Departments.Select(x => x.Number).ToArray();
+            int[] departmentsNumbers = GlobalConnector.Departments.Select(x => x.Number).ToArray(); 
             DepartmentComboBox.DataSource = departmentsNumbers;
+
+            loadEmpToUi(currentEmployee);
         }
 
         #region Buttons
         private void UpdateEmployeeButton_Click(object sender, EventArgs e)
         {
-            // implement edit button -- CONTINUE HERE
-
             // validate info from boxes
             if (!ValidForm())
             {
@@ -157,7 +157,7 @@ namespace CompanyUI
             EmployeeBirthdaydateTimePicker.Value = emp.Birthday;
             AddressTextBox.Text = emp.Address;
             SSNTextBox.Text = emp.SSN.ToString();
-            DepartmentComboBox.Text = emp.DepartmentNumber.ToString();
+            DepartmentComboBox.Text = emp.DepartmentNumber.ToString(); // here
             SalaryTextBox.Text = emp.Salary.ToString();
             MinitComboBox.Text = emp.Minit.ToString();
         }

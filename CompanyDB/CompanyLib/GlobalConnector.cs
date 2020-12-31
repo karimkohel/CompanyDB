@@ -96,7 +96,7 @@ namespace CompanyLib
                 throw new NullReferenceException("DB has no entries");
             }
 
-            foreach(Department dep in GlobalConnector.Departments) // check if employee already in list
+            foreach(Department dep in GlobalConnector.Departments)
             {
                 // one liner to get all employees from employee db with same number as each department
                 List<Employee> empsInDep = GlobalConnector.Employees.FindAll(x => x.DepartmentNumber == dep.Number);
@@ -125,6 +125,7 @@ namespace CompanyLib
             foreach(string line in lines)
             {
                 string[] cols = line.Split(',');
+
                 Employee emp = new Employee();
 
                 emp.Id = int.Parse(cols[0]);

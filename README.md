@@ -16,7 +16,8 @@ Company database program that features a GUI with multiple forms and screens to 
 #### TODO
 - [ ] Rigorous and random testing
     - [X] Resolve multiple names in departmentemployees (globalconn -> loadempsindep -> check emp duplication)
-    - [ ] Update employee acting funny
+    - [X] Update employee acting funny (wromg department number)
+    - [ ] wrong names in departmentemployees
 - [ ] Back end
     - [X] Employees class
         - [X] Base class
@@ -35,7 +36,7 @@ Company database program that features a GUI with multiple forms and screens to 
     - [X] Reload home list boxes
     - [X] Salary Summation Logic
     - [X] Exception handling for file reading and writing
-    - [ ] **Feature if object already exists dont create it again**
+    - [ ] Feature if object already exists dont create it again
     - [ ] Feature Remove Employee or Dep
 
 - [X] Front end

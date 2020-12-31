@@ -17,7 +17,7 @@ Company database program that features a GUI with multiple forms and screens to 
 - [ ] Rigorous and random testing
     - [X] Resolve multiple names in departmentemployees (globalconn -> loadempsindep -> check emp duplication)
     - [X] Update employee acting funny (wromg department number)
-    - [ ] wrong names in departmentemployees
+    - [X] wrong names in departmentemployees
 - [ ] Back end
     - [X] Employees class
         - [X] Base class

@@ -58,7 +58,7 @@ namespace CompanyUI
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(477, 48);
             this.DepartmentComboBox.TabIndex = 16;
-            this.DepartmentComboBox.SelectionChangeCommitted += new System.EventHandler(this.DepartmentComboBox_SelectedValueChanged);
+            this.DepartmentComboBox.SelectionChangeCommitted += new System.EventHandler(this.DepartmentComboBox_SelectionChangeCommitted);
             // 
             // DoneButton
             // 

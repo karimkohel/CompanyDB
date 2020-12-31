@@ -10,7 +10,7 @@ Company database program that features a GUI with multiple forms and screens to 
 ---
 
 ##### Look:
-![Demo picture](https://raw.githubusercontent.com/karimkohel/CompanyDB/main/example1.PNG "Demo")
+![Demo picture](https://raw.githubusercontent.com/karimkohel/CompanyDB/main/examplepic.PNG "Demo")
 
 
 #### Tasks:

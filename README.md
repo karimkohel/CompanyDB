@@ -79,4 +79,4 @@ The structer of the app internally is made up of 2 components:
 
 
 ### License 
-> This is my private work for my second midterm evaluation
+> This is my private work for my second midterm evaluation that is now open as documentation

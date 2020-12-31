@@ -6,14 +6,40 @@
 
 Company database program that features a GUI with multiple forms and screens to read and write to said database of company employees.
 
-###  TO DO:
----
-
-##### Look:
+##### The Look:
 ![Demo picture](https://raw.githubusercontent.com/karimkohel/CompanyDB/main/examplepic.PNG "Demo")
 
+---
 
-#### Tasks:
+### Usage
+
+##### Requirements
+The app requires a database consisting of 2 csv files that can be created or loaded from home page and must be present for the app to continue working as intended.
+
+##### Function
+The app can create new employees and departments to the database, search and edit them while keeping data in the csv files in the same directory they are intended to be.
+
+Searching employees can be done through the search bar at the home page with the employee name, social security number or address.
+
+Refreshing the database is necessary for newly created employees or departments to show so a refresh button appears at home page when database is loaded.
+
+About button shows options to get to know more about the app, get help or know more about the developer.
+
+All options and functions should be accessible from menu strip in home page.
+
+#### Structure
+The structer of the app internally is made up of 2 components:
+- The back end as a C# code library that is written seperate from the UI project and can be re-used with any other front end structure.
+- The front end is comprised of a basic Winforms App using the .Net Framework and houses all UI related logic like:
+    - form validation for all user entry forms
+    - form structure and design
+    - xml comments to help with code readability when needed
+
+
+---
+
+###  TO DO:
+
 - [X] Documentation
 - [X] Rigorous and random testing
     - [X] Resolve multiple names in departmentemployees (globalconn -> loadempsindep -> check emp duplication)
@@ -53,4 +79,4 @@ Company database program that features a GUI with multiple forms and screens to 
 
 
 ### License 
-This is my private work for my second midterm evaluation
+> This is my private work for my second midterm evaluation
